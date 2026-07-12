@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion admin | UNILUK</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <script defer src="/static/js/script.js"></script>
+  </head>
+  <body>
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">UNILUK</a>
+        <div class="header-actions">
+          <a class="button button-primary" href="/">Retour au site</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      {# Flash messages #} {% with messages =
+      get_flashed_messages(with_categories=true) %} {% if messages %}
+      <div class="flash-messages">
+        {% for category, message in messages %}
+        <div class="flash flash-{{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+      {% endif %} {% endwith %}
+
+      <section class="section admin-shell">
+        :
+        <div class="container" style="max-width: 560px">
+          <div class="section-title">
+            <h2>Connexion administrateur</h2>
+            <p>Accédez au tableau de bord de gestion des inscriptions.</p>
+          </div>
+          <div class="form-card">
+            <form method="post" action="/admin/login">
+              <label for="username">Nom d'utilisateur</label>
+              <input id="username" name="username" type="text" required />
+              <label for="password">Mot de passe</label>
+              <input id="password" name="password" type="password" required />
+              <button class="button button-primary" type="submit">
+                Se connecter
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">UNILUK</p>
+          <p>Université Adventiste de Lukanga.</p>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <p>+243 990 687 596</p>
+          <p>registrar.uniluk@gmail.com</p>
+        </div>
+        <div>
+          <p class="footer-title">Adresse</p>
+          <p>Lukanga,Territoire de Lubero,Nord-Kivu,RDC</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

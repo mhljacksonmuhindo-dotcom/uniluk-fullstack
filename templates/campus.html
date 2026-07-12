@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus | UNILUK</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script
+      defer
+      src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-left">
+          <span
+            ><i class="fa-solid fa-envelope"></i
+            >registrar.uniluk@gmail.com</span
+          >
+          <span><i class="fa-solid fa-phone"></i> +243 990 889 596</span>
+        </div>
+        <div class="top-right">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a class="nav-link" href="#decouvrir">Decouvrir</a>
+        </div>
+      </div>
+    </div>
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">UNILUK</a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="/">Accueil</a>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Université</button>
+              <div class="dropdown-menu">
+                <a href="/uniluk">UNILUK</a>
+                <a href="/istm">ISTM</a>
+                <a href="/ista">ISTA</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Campus</button>
+              <div class="dropdown-menu">
+                <a href="/campus">Vie spirituelle</a>
+                <a href="/campus">Sports</a
+                ><a href="/campus">Infrastructures</a>
+              </div>
+            </li>
+            <li><a class="nav-link" href="/admission">Admission</a></li>
+            <li>
+              <a class="nav-link" href="/actualites">Actualités</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="button button-primary" href="/inscription">S'inscrire</a>
+          <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Menu mobile"
+          ></button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero page-hero-campus">
+        <div class="container page-hero-content">
+          <p class="eyebrow">Campus</p>
+          <h1>La vie étudiante au cœur du campus</h1>
+          <p>
+            Un espace de formation, de spiritualité, de sport et
+            d'épanouissement personnel.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container grid-2">
+          <div>
+            <div
+              class="section-title"
+              style="text-align: left; margin-bottom: 1.2rem"
+            >
+              <h2>Le campus en action</h2>
+              <p>
+                Des espaces conçus pour apprendre, se rencontrer et grandir.
+              </p>
+            </div>
+            <p>
+              Le campus UNILUK offre un cadre vivant où la vie spirituelle, les
+              activités sportives et les services de soutien se complètent
+              naturellement. Chaque espace est pensé pour favoriser
+              l’épanouissement et la réussite.
+            </p>
+          </div>
+          <div class="image-frame">
+            <img src="/static/images/etudiant.webp" alt="Campus UNILUK" />
+          </div>
+        </div>
+      </section>
+      <section class="section bg-soft">
+        <div class="container">
+          <div class="section-title">
+            <h2>Vie spirituelle</h2>
+            <p>Des lieux de culte et de partage pour la communauté.</p>
+          </div>
+          <div class="spiritual-grid">
+            <article class="media-card spiritual-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/eglises/montpick.webp"
+                  alt="Église francophone"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Église francophone</h3>
+                <p>
+                  Un espace de prière, d'échange et de formation spirituelle.
+                </p>
+              </div>
+            </article>
+            <article class="media-card spiritual-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/eglises/anglophone.webp"
+                  alt="Église anglophone"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Église anglophone</h3>
+                <p>Des rassemblements ouverts à tous les étudiants.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Sports</h2>
+            <p>Des terrains et équipements pour cultiver l'esprit d'équipe.</p>
+          </div>
+          <div class="sports-gallery">
+            <article class="sport-card image-slot">
+              <img src="/static/images/sports/footbal.webp" alt="Football" />
+              <div class="sport-card-content">
+                <h3>Football</h3>
+                <p>Un terrain pour les entraînements et les compétitions.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="sport-card image-slot">
+              <img
+                src="/static/images/sports/basketball.webp"
+                alt="Basket-ball"
+              />
+              <div class="sport-card-content">
+                <h3>Basket-ball</h3>
+                <p>
+                  Des installations pour l'entraînement et l'épanouissement
+                  sportif.
+                </p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="sport-card image-slot">
+              <img src="/static/images/sports/volley.jpeg" alt="Volley-ball" />
+              <div class="sport-card-content">
+                <h3>Volley-ball</h3>
+                <p>Une pratique collective stimulante et accessible.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="sport-card image-slot">
+              <img src="/static/images/sports/tennis.jpeg" alt="Tennis" />
+              <div class="sport-card-content">
+                <h3>Tennis</h3>
+                <p>Des courts pour la détente et les tournois.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section bg-soft">
+        <div class="container">
+          <div class="section-title">
+            <h2>Infrastructures</h2>
+            <p>
+              Des services modernes au service du bien-être et de
+              l'apprentissage.
+            </p>
+          </div>
+          <div class="media-card-grid">
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/polyclinique.webp"
+                  alt="Polyclinique Universitaire"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Polyclinique Universitaire</h3>
+                <p>Un service médical accessible à la communauté.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/restaurant.jpeg"
+                  alt="Restaurant Universitaire"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Restaurant Universitaire</h3>
+                <p>Un espace convivial pour la restauration.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/geusthouse (2).webp"
+                  alt="Guest House"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Guest House</h3>
+                <p>Hébergement pour visiteurs et partenaires.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/bibliotheaque.webp"
+                  alt="Bibliothèque"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Bibliothèque</h3>
+                <p>Un lieu calme pour l'étude et la recherche.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/laboratoireistm.webp"
+                  alt="Laboratoires"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Laboratoires</h3>
+                <p>Des équipements modernes pour la pratique scientifique.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/labo.jpeg"
+                  alt="Laboratoire informatique"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Laboratoire Informatique</h3>
+                <p>
+                  Des équipements modernes pour la pratique informatiser et
+                  diriger.
+                </p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/secretariat.webp"
+                  alt="Secretariat"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Secretariat informatique</h3>
+                <p>Des équipements modernes pour la saisi et impression.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/cafeteriat.jpeg"
+                  alt="Cafétéria"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Cafétéria</h3>
+                <p>Un espace de pause pour les étudiants et les visiteurs.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">UNILUK</p>
+          <p>Université Adventiste de Lukanga.</p>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <p>+243 990 889 570</p>
+          <p>registrar.uniluk@gmail.com</p>
+        </div>
+        <div>
+          <p class="footer-title">Adresse</p>
+          <p>Lukanga, Territoire de Lubero, Nord-Kivu, RDC</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

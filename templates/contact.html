@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | UNILUK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-left">
+                <span><i class="fa-solid fa-envelope"></i> registrar.uniluk@gmail.com</span>
+                <span><i class="fa-solid fa-phone"></i> +243 990 687 596</span>
+            </div>
+            <div class="top-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a class="nav-link" href="#decouvrir">Decouvrir</a>
+            </div>
+        </div>
+    </div>
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/">UNILUK</a>
+            <nav class="main-nav"><ul class="nav-list">
+                <li>
+                <a class="nav-link" href="/">Accueil</a>
+            </li><li class="dropdown">
+                <button class="dropdown-toggle" type="button">Université</button>
+                <div class="dropdown-menu">
+                    <a href="/uniluk">UNILUK</a>
+                    <a href="/istm">ISTM</a>
+                    <a href="/ista">ISTA</a>
+                </div>
+            </li>
+                <li class="dropdown">
+                    <button class="dropdown-toggle" type="button">Campus</button>
+                    <div class="dropdown-menu">
+                        <a href="/campus">Vie spirituelle</a>
+                        <a href="/campus">Sports</a>
+                        <a href="/campus">Infrastructures</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav-link" href="/admission">Admission</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/actualites">Actualités</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                    <a class="button button-primary" href="/inscription">S'inscrire</a>
+                    <button class="burger" id="burger" type="button" aria-label="Menu mobile">
+
+                    </button>
+                </div>
+            </div>
+        </header>
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash flash-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+
+        <section class="page-hero page-hero-contact">
+            <div class="container page-hero-content">
+                <p class="eyebrow">Contact</p>
+                <h1>Nous sommes à votre écoute</h1>
+                <p>Pour vos questions, demandes d'information ou candidature, écrivez-nous.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <div class="section-title" style="text-align:left; margin-bottom:1rem;">
+                        <h2>Coordonnées</h2>
+                        <p>Une équipe disponible pour vous accompagner.</p>
+                    </div>
+                    <article>
+                        <h3>Téléphone</h3>
+                        <p>+243 990 687 596</p>
+                    </article>
+                    <article>
+                        <h3>Email</h3>
+                        <p>registrar.uniluk@gmail.com</p>
+                    </article>
+                    <article>
+                        <h3>Adresse</h3>
+                        <p>Lukanga, Territoire de Lubero, Nord-Kivu, RDC</p>
+                    </article>
+                </div>
+                <div class="form-card">
+                    <form method="post" action="/contact">
+                        <div class="form-grid">
+                            <div>
+                                <label for="nom">Nom</label>
+                                <input id="nom" name="nom" type="text" required>
+                            </div>
+                            <div>
+                                <label for="prenom">Prénom</label>
+                                <input id="prenom" name="prenom" type="text" required>
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" required>
+                            </div>
+                            <div>
+                                <label for="telephone">Téléphone</label>
+                                <input id="telephone" name="telephone" type="tel" required>
+                            </div>
+                        </div>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message"></textarea>
+                        <button class="button button-primary" type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>   
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container footer-inner">
+        <div>
+        <p class="footer-brand">UNILUK</p>
+        <p>Université Adventiste de Lukanga.</p>
+    </div>
+    <div>
+        <p class="footer-title">Contact</p>
+        <p>+243 990 687 596</p>
+        <p>registrar.uniluk@gmail.com</p>
+    </div>
+    <div>
+        <p class="footer-title">Adresse</p>
+        <p>Lukanga, Territoire de Lubero, Nord-Kivu, RDC</p>
+    </div>
+    </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscriptions admin | UNILUK</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <script defer src="/static/js/script.js"></script>
+  </head>
+  <body>
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">UNILUK</a>
+        <div class="header-actions">
+          <a class="button button-primary" href="/admin/dashboard">Dashboard</a>
+          <a class="button button-secondary" href="/admin/logout"
+            >Déconnexion</a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+       {% with messages =
+      get_flashed_messages(with_categories=true) %} {% if messages %}
+      <div class="flash-messages">
+        {% for category, message in messages %}
+        <div class="flash flash-{{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+      {% endif %} {% endwith %}
+
+      <section class="section admin-shell">
+        <div class="container">
+          <div class="section-title">
+            <h2>Inscriptions</h2>
+            <p>Gérez les candidatures des futurs étudiants.</p>
+          </div>
+          <form
+            action="/admin/inscriptions"
+            method="get"
+            style="
+              margin-bottom: 1.5rem;
+              display: flex;
+              gap: 1rem;
+              flex-wrap: wrap;
+              align-items: center;
+            "
+          >
+            <input
+              name="search"
+              placeholder="Recherche par nom, email, filière"
+              value="{{ search }}"
+              style="
+                flex: 1;
+                min-width: 220px;
+                padding: 0.95rem 1rem;
+                border-radius: 14px;
+                border: 1px solid #cdd6e1;
+              "
+            />
+            <button class="button button-primary" type="submit">
+              Rechercher
+            </button>
+            <a
+              class="button button-secondary"
+              href="/admin/inscriptions"
+              style="background: #f5f6fb; color: #1d2d4d"
+            >
+              Réinitialiser</a
+            >
+          </form>
+          <div class="cards-grid">
+            {% for inscription in inscriptions %}
+            <div class="card">
+              <h3>{{ inscription.prenom }} {{ inscription.nom }}</h3>
+              <p><strong>Email :</strong> {{ inscription.email }}</p>
+              <p><strong>Filière :</strong> {{ inscription.filiere }}</p>
+              <p><strong>Téléphone :</strong> {{ inscription.telephone }}</p>
+              <p><strong>Ville :</strong> {{ inscription.ville }}</p>
+              <p>
+                <strong>Dossier ZIP :</strong>
+                {% if inscription.dossier_zip_path %}
+                <a
+                  class="button button-secondary"
+                  href="/admin/inscriptions/zip/{{ inscription.id }}"
+                  style="padding: 0.55rem 0.8rem"
+                  >Télécharger</a
+                >
+                {% else %} Non disponible {% endif %}
+              </p>
+              <div class="admin-actions">
+                <a
+                  class="button button-primary"
+                  href="/admin/inscriptions/edit/{{ inscription.id }}"
+                >
+                  Modifier</a
+                >
+                <a
+                  class="button button-secondary"
+                  href="/admin/inscriptions/delete/{{ inscription.id }}"
+                  style="background: #fce4e4; color: #9b2335"
+                >
+                  Supprimer</a
+                >
+              </div>
+            </div>
+            {% else %}
+            <div class="card">
+              <p>Aucune inscription trouvée.</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">UNILUK</p>
+          <p>Université Adventiste de Lukanga.</p>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <p>+243 990 687 596</p>
+          <p>registrar.uniluk@gmail.com</p>
+        </div>
+        <div>
+          <p class="footer-title">Adresse</p>
+          <p>Lukanga,Territoire de Lubero,Nord-Kivu,RDC</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

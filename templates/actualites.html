@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script
+      defer
+      src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>Actualités | UNILUK</title>
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-left">
+          <span
+            ><i class="fa-solid fa-envelope"></i>
+            registrar.uniluk@gmail.com</span
+          >
+          <span><i class="fa-solid fa-phone"></i> +243 994 889 570</span>
+        </div>
+        <div class="top-right">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a class="nav-link" href="#decouvrir">Decouvrir</a>
+        </div>
+      </div>
+    </div>
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">UNILUK</a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="/">Accueil</a>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Université</button>
+              <div class="dropdown-menu">
+                <a href="/uniluk">UNILUK</a>
+                <a href="/istm">ISTM</a>
+                <a href="/ista">ISTA</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Campus</button>
+              <div class="dropdown-menu">
+                <a href="/campus">Vie spirituelle</a>
+                <a href="/campus">Sports</a>
+                <a href="/campus">Infrastructures</a>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="/admission">Admission</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/actualites">Actualités</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="button button-primary" href="/inscription">S'inscrire</a>
+          <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Menu mobile"
+          ></button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero page-hero-news">
+        <div class="container page-hero-content">
+          <p class="eyebrow">Actualités</p>
+          <h1>Les dernières nouvelles de l'UNILUK</h1>
+          <p>
+            Des événements, des initiatives et des opportunités à ne pas
+            manquer.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>À l'honneur cette saison</h2>
+            <p>Des moments forts qui reflètent l'engagement de l'université.</p>
+          </div>
+          <div class="cards-grid">
+            <div class="card">
+              <div class="news-card-image image-slot">
+                <img
+                  src="/static/images/actualites/forum.webp"
+                  alt="Forum des carrières"
+                />
+              </div>
+              <h3>Forum des carrières</h3>
+              <p>
+                Rencontres avec des professionnels et ateliers de préparation à
+                l'emploi.
+              </p>
+            </div>
+            <div class="card">
+              <div class="news-card-image image-slot">
+                <img
+                  src="/static/images/actualites/actualite.webp"
+                  alt="Journée scientifique"
+                />
+              </div>
+              <h3>Journée scientifique</h3>
+              <p>
+                Présentations de projets étudiants et conférences de chercheurs.
+              </p>
+            </div>
+            <div class="card">
+              <div class="news-card-image image-slot">
+                <img
+                  src="/static/images/actualites/admission.webp"
+                  alt="Programme de solidarité"
+                />
+              </div>
+              <h3>Programme de solidarité</h3>
+              <p>
+                Actions sociales menées par les étudiants au service des
+                communautés locales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">UNILUK</p>
+          <p>Université Adventiste de Lukanga.</p>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <p>+243 990 687 596</p>
+          <p>registrar.uniluk@gmail.com</p>
+        </div>
+        <div>
+          <p class="footer-title">Adresse</p>
+          <p>Lukanga, Territoire de Lubero, Nord-Kivu, RDC</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

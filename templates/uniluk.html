@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNILUK | Institution</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script
+      defer
+      src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-left">
+          <span
+            ><i class="fa-solid fa-envelope"> </i>
+            registrar.uniluk@gmail.com</span
+          >
+          <span><i class="fa-solid fa-phone"> </i> +243 990 687 596</span>
+        </div>
+        <div class="top-right">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a class="nav-link" href="#decouvrir">Decouvrir</a>
+        </div>
+      </div>
+    </div>
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">UNILUK</a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="/">Accueil</a>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Université</button>
+              <div class="dropdown-menu">
+                <a href="/uniluk">UNILUK</a>
+                <a href="/istm">ISTM</a>
+                <a href="/ista">ISTA</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Campus</button>
+              <div class="dropdown-menu">
+                <a href="/campus">Vie spirituelle</a>
+                <a href="/campus">Sports</a>
+                <a href="/campus">Infrastructures</a>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="/admission">Admission</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/actualites">Actualités</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="button button-primary" href="/inscription">S'inscrire</a>
+          <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Menu mobile"
+          ></button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero-uniluk">
+        <div class="container page-hero-content">
+          <p class="eyebrow">UNILUK</p>
+          <h1>Le cœur académique de l'université adventiste</h1>
+          <p>
+            Une institution pluridisciplinaire, humaine et tournées vers
+            l'excellence.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid-2">
+          <div>
+            <div
+              class="section-title"
+              style="text-align: left; margin-bottom: 1.2rem"
+            >
+              <h2>Notre identité</h2>
+              <p>
+                Formation, intégrité et service au sein d'un environnement
+                inspirant.
+              </p>
+            </div>
+            <p>
+              UNILUK conjugue formation académique et vie chrétienne dans un
+              cadre moderne. Les programmes sont conçus pour développer les
+              compétences du XXIe siècle tout en formant des citoyens
+              responsables.
+            </p>
+            <p>
+              Le campus offre aux étudiants des possibilités d'étude, de
+              recherche, de sport et d'engagement associatif.
+            </p>
+            <div style="margin-top: 1.4rem">
+              <a class="button button-primary" href="/#histoire-vision-mission"
+                >Notre histoire, vision et mission</a
+              >
+            </div>
+          </div>
+          <div class="image-frame">
+            <img src="/static/images/grande.webp" alt="Campus UNILUK" />
+          </div>
+        </div>
+      </section>
+        <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Facultés UNILUK</h2>
+            <p>
+              Des parcours académiques solides, conçus pour développer des
+              compétences utiles dès le premier terrain.
+            </p>
+          </div>
+          <div class="cards-grid">
+            <div class="card">
+              <h3>Sciences théologiques</h3>
+              <p>
+                Leadership spirituel, éthique et mission au service de Dieu et
+                de la société.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Sciences économiques</h3>
+              <p>
+                Gestion, finance, entrepreneuriat et maîtrise des outils de
+                décision.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Sciences informatiques</h3>
+              <p>
+                Développement, systèmes et solutions numériques au service des
+                besoins réels.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Sciences agronomiques</h3>
+              <p>
+                Agriculture durable, sécurité alimentaire et appui au
+                développement local.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Sciences de l’éducation</h3>
+              <p>
+                Pédagogie, didactique et encadrement pour former les générations
+                de demain.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Médecine</h3>
+              <p>Santé publique, nutrition et engagement communautaire.</p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-soft">
+        <div class="container">
+          <div class="section-title">
+            <h2>Atouts du campus</h2>
+            <p>
+              Des services et infrastructures pensées pour la réussite de chaque
+              étudiant.
+            </p>
+          </div>
+          <div class="cards-grid">
+            <div class="card">
+              <h3>Accompagnement religieux</h3>
+              <p>
+                Des cadres de prière, d'étude biblique et de conseil spirituel.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Infrastructures modernes</h3>
+              <p>
+                Bibliothèque, laboratoires, salles informatiques et espaces
+                sportifs.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Vie communautaire</h3>
+              <p>
+                Événements, clubs et opportunités de synergie sur le campus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">UNILUK</p>
+          <p>Université Adventiste de Lukanga.</p>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <p>+243 990 687 596</p>
+          <p>registrar.uniluk@gmail.com</p>
+        </div>
+        <div>
+          <p class="footer-title">Adresse</p>
+          <p>Lukanga,Territoire de Lubero,Nord-Kivu,RDC</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil | UNILUK</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script
+      defer
+      src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-left">
+          <span
+            ><i class="fa-solid fa-envelope"></i>
+            registrar.uniluk@gmail.com</span
+          >
+          <span><i class="fa-solid fa-phone"></i> +243 990 687 596</span>
+        </div>
+        <div class="top-right">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a class="nav-link" href="#decouvrir">Decouvrir</a>
+        </div>
+      </div>
+    </div>
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">UNILUK</a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="/">Accueil</a>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Université</button>
+              <div class="dropdown-menu">
+                <a href="/uniluk">UNILUK</a>
+                <a href="/istm">ISTM</a>
+                <a href="/ista">ISTA</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Campus</button>
+              <div class="dropdown-menu">
+                <a href="/campus">Vie spirituelle</a>
+                <a href="/campus">Sports</a>
+                <a href="/campus">Infrastructures</a>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="/admission">Admission</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/actualites">Actualités</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/#centres-recherche"
+                >Centres de Recherche</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="button button-primary" href="/inscription">S'inscrire</a>
+          <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Menu mobile"
+          ></button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-slider" aria-hidden="true">
+          <div class="hero-slide active image-slot">
+            <img src="/static/images/hero/uniluk.webp" alt="" />
+          </div>
+          <div class="hero-slide image-slot">
+            <img src="/static/images/hero/plaza.webp" alt="" />
+          </div>
+          <div class="hero-slide image-slot">
+            <img src="/static/images/hero/geusthouse.webp" alt="" />
+          </div>
+          <div class="hero-slide image-slot">
+            <img src="/static/images/hero/UNILUK1 (2).webp" alt="" />
+          </div>
+          <div class="hero-slide image-slot">
+            <img src="/static/images/hero/vueuniluk.webp" alt="" />
+          </div>
+          <div class="hero-slide image-slot">
+            <img src="/static/images/hero/policlinique1.webp" alt="" />
+          </div>
+        </div>
+        <button
+          class="hero-control prev"
+          type="button"
+          aria-label="Image précédente"
+        >
+          &#10094;
+        </button>
+        <button
+          class="hero-control next"
+          type="button"
+          aria-label="Image suivante"
+        >
+          &#10095;
+        </button>
+        <div class="container hero-content">
+          <p class="eyebrow">Université Adventiste de Lukanga</p>
+          <h1>Construire l’avenir par une éducation d’excellence</h1>
+          <p>
+            À UNILUK, nous formons des étudiants compétents et responsables,
+            ancrés dans les valeurs chrétiennes, prêts à servir leur communauté
+            en République Démocratique du Congo.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-secondary" href="#decouvrir">Découvrir</a>
+            <a class="button button-primary" href="/inscription">S'inscrire</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="decouvrir">
+        <div class="container">
+          <div class="section-title">
+            <h2>Chiffres clés de l'UNILUK</h2>
+            <p>
+              Une institution engagée dans l’excellence académique, la formation
+              humaine et l’impact communautaire.
+            </p>
+          </div>
+          <div class="stats-grid">
+            <div class="card">
+              <span>1996</span>
+              <h3>Année de création</h3>
+              <p>Une histoire au service de l’éducation adventiste.</p>
+            </div>
+            <div class="card">
+              <span>3</span>
+              <h3>Établissements</h3>
+              <p>UNILUK, ISTM et ISTA au service de la formation.</p>
+            </div>
+            <div class="card">
+              <span>2</span>
+              <h3>Églises</h3>
+              <p>Deux lieux de culte pour la vie spirituelle.</p>
+            </div>
+            <div class="card">
+              <span>4</span>
+              <h3>Terrains sportifs</h3>
+              <p>Des espaces pour la discipline et l’esprit d’équipe.</p>
+            </div>
+            <div class="card">
+              <span>8+</span>
+              <h3>Domaines d’études</h3>
+              <p>Des filières alignées sur les besoins du terrain.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-soft">
+        <div class="container">
+          <div class="section-title">
+            <h2>UNILUK, ISTM &amp; ISTA</h2>
+            <p>
+              Trois établissements, une même vision : former des professionnels
+              compétents et des citoyens de service.
+            </p>
+          </div>
+          <div class="entity-slider">
+            <div class="entity-track">
+              <article class="entity-slide">
+                <div class="entity-image image-slot">
+                  <img src="/static/images/entites/uniluk1.webp" alt="UNILUK" />
+                </div>
+                <div class="entity-copy">
+                  <h3>UNILUK</h3>
+                  <p>
+                    Études universitaires et formation intégrale : sciences,
+                    éducation .
+                  </p>
+                  <a class="button button-primary" href="/uniluk">Découvrir</a>
+                </div>
+              </article>
+              <article class="entity-slide">
+                <div class="entity-image image-slot">
+                  <img src="/static/images/entites/VUE istm.webp" alt="ISTM" />
+                </div>
+                <div class="entity-copy">
+                  <h3>ISTM</h3>
+                  <p>
+                    Parcours santé et management : une formation pratique,
+                    éthique et orientée vers l'employabilité.
+                  </p>
+                  <a class="button button-primary" href="/istm">Découvrir</a>
+                </div>
+              </article>
+              <article class="entity-slide">
+                <div class="entity-image image-slot">
+                  <img src="/static/images/entites/faceenord.webp" alt="ISTA" />
+                </div>
+                <div class="entity-copy">
+                  <h3>ISTA</h3>
+                  <p>
+                    Techniques appliquées : bâtiment, travaux publics et
+                    architecture pour construire durablement.
+                  </p>
+                  <a class="button button-primary" href="/ista">Découvrir</a>
+                </div>
+              </article>
+            </div>
+            <button
+              class="entity-control prev"
+              type="button"
+              aria-label="Entité précédente"
+            >
+              &#10094;
+            </button>
+            <button
+              class="entity-control next"
+              type="button"
+              aria-label="Entité suivante"
+            >
+              &#10095;
+            </button>
+          </div>
+          <div class="cards-grid legacy-entity-cards" aria-hidden="true">
+            <div class="card">
+              <h3>UNILUK</h3>
+              <p>
+                Études universitaires et formation intégrale : sciences,
+                éducation .
+              </p>
+              <a class="button button-primary" href="/uniluk">Découvrir</a>
+            </div>
+            <div class="card">
+              <h3>ISTM</h3>
+              <p>
+                Parcours santé et management : une formation pratique, éthique
+                et orientée vers l’employabilité.
+              </p>
+              <a class="button button-primary" href="/istm">Découvrir</a>
+            </div>
+            <div class="card">
+              <h3>ISTA</h3>
+              <p>
+                Techniques appliquées : bâtiment, travaux publics et
+                architecture pour construire durablement.
+              </p>
+              <a class="button button-primary" href="/ista">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Facultés UNILUK</h2>
+            <p>
+              Des parcours académiques solides, conçus pour développer des
+              compétences utiles dès le premier terrain.
+            </p>
+          </div>
+          <div class="cards-grid">
+            <div class="card">
+              <h3>Sciences théologiques</h3>
+              <p>
+                Leadership spirituel, éthique et mission au service de Dieu et
+                de la société.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Sciences économiques</h3>
+              <p>
+                Gestion, finance, entrepreneuriat et maîtrise des outils de
+                décision.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Sciences informatiques</h3>
+              <p>
+                Développement, systèmes et solutions numériques au service des
+                besoins réels.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Sciences agronomiques</h3>
+              <p>
+                Agriculture durable, sécurité alimentaire et appui au
+                développement local.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Sciences de l’éducation</h3>
+              <p>
+                Pédagogie, didactique et encadrement pour former les générations
+                de demain.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Médecine</h3>
+              <p>Santé publique, nutrition et engagement communautaire.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-soft">
+        <div class="container grid-2">
+          <div>
+            <div
+              class="section-title"
+              style="text-align: left; margin-bottom: 1.7rem"
+            >
+              <h2>Mot du Recteur</h2>
+              <p>
+                Un message de foi, d’excellence et d’espérance pour les
+                générations futures.
+              </p>
+            </div>
+            <p>
+              Bienvenue à l’Université Adventiste de Lukanga. Notre mission est
+              d’accompagner chaque étudiant dans une formation qui allie savoir,
+              caractère et service. À travers l’enseignement, la vie spirituelle
+              et les activités sur le campus, nous construisons un environnement
+              où l’on apprend sérieusement, où l’on grandit humainement et où
+              l’on se prépare à répondre aux défis de la société.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Valeurs chrétiennes</span>
+              <span class="pill">Encadrement</span>
+              <span class="pill">Esprit de service</span>
+            </div>
+            <div style="margin-top: 1.4rem">
+              <a class="button button-primary" href="/uniluk"
+                >Lire le message</a
+              >
+            </div>
+          </div>
+          <div class="image-frame">
+            <img src="/static/images/recteur.webp" alt="Recteur UNILUK" />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section institutional-section"
+        id="histoire-vision-mission"
+      >
+        <div class="container">
+          <div class="institutional-hero">
+            <div class="institutional-copy">
+              <p class="eyebrow">Institution</p>
+              <h2>Notre Histoire, Notre Vision et Notre Mission</h2>
+              <p>
+                L'Université Adventiste de Lukanga construit son identité autour
+                d'une formation chrétienne holistique, exigeante et profondément
+                orientée vers le service.
+              </p>
+            </div>
+            <div class="institutional-image">
+              <img
+                src="/static/images/hero/vueuniluk.webp"
+                alt="Campus de l'Université Adventiste de Lukanga"
+              />
+            </div>
+          </div>
+
+          <div class="institutional-cards">
+            <article class="card institutional-card">
+              <div class="institutional-icon">
+                <i class="fa-solid fa-landmark"> </i>
+              </div>
+              <h3>Notre Histoire</h3>
+              <p>
+                L'Université Adventiste de Lukanga (UNILUK) a été officiellement
+                créée en 1996. Depuis sa création, elle s'est engagée à offrir
+                une formation supérieure de qualité fondée sur les valeurs
+                chrétiennes de l'Église Adventiste du Septième Jour. Au fil des
+                années, l'université a développé ses programmes académiques, ses
+                infrastructures et ses services afin de former des
+                professionnels compétents, responsables et prêts à servir Dieu
+                et la société. Aujourd'hui, l'UNILUK regroupe plusieurs entités
+                académiques et continue de promouvoir l'excellence dans
+                l'enseignement, la recherche et le service communautaire.
+              </p>
+            </article>
+
+            <article class="card institutional-card">
+              <div class="institutional-icon">
+                <i class="fa-solid fa-eye"></i>
+              </div>
+              <h3>Notre Vision</h3>
+              <p>
+                Former pour l'excellence au service en inculquant un sens
+                d'intégrité, d'initiative, de persévérance, d'adaptabilité et de
+                confiance en Dieu (IIPAC).
+              </p>
+            </article>
+
+            <article class="card institutional-card">
+              <div class="institutional-icon">
+                <i class="fa-solid fa-hands-holding-circle"></i>
+              </div>
+              <h3>Notre Mission</h3>
+              <p>
+                Développer et fournir une éducation chrétienne holistique de
+                qualité en préparant les étudiants sur les plans physique,
+                moral, spirituel, social, intellectuel et professionnel afin de
+                servir Dieu et l'humanité.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Formations &amp; filières</h2>
+            <p>
+              Des programmes pensés pour le terrain : santé, techniques
+              appliquées et sciences humaines.
+            </p>
+          </div>
+          <div class="cards-grid">
+            <div class="card">
+              <h3>Filières ISTM</h3>
+              <p>
+                Soins infirmiers, imagerie médicale, technique de laboratoire,
+                sage-femme, pédiatrie.
+              </p>
+              <a class="button button-primary" href="/istm">Voir ISTM</a>
+            </div>
+            <div class="card">
+              <h3>Filières ISTA</h3>
+              <p>Préparatoire, Bâtiment &amp; Travaux Publics, architecture.</p>
+              <a class="button button-primary" href="/ista">Voir ISTA</a>
+            </div>
+            <div class="card">
+              <h3>Parcours UNILUK</h3>
+              <p>
+                Théologie, économie, informatique, agronomie, éducation,
+                médecine, 
+              </p>
+              <a class="button button-primary" href="/uniluk">Voir UNILUK</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-soft">
+        <div class="container">
+          <div class="section-title">
+            <h2>Vie sur le campus</h2>
+            <p>
+              Deux églises, des terrains sportifs et une ambiance
+              d’apprentissage en communauté.
+            </p>
+          </div>
+          <div class="spiritual-grid">
+            <article class="media-card spiritual-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/eglises/montpick.webp"
+                  alt="Église francophone"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Église francophone</h3>
+                <p>
+                  Un espace de prière, d'échange et de formation spirituelle
+                  pour la communauté francophone.
+                </p>
+              </div>
+            </article>
+            <article class="media-card spiritual-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/eglises/anglophone.webp"
+                  alt="Église anglophone"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Église anglophone</h3>
+                <p>
+                  Des rassemblements ouverts aux étudiants et visiteurs dans un
+                  cadre fraternel.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Installations sportives</h2>
+            <p>Des terrains et équipements pour cultiver l'esprit d'équipe.</p>
+          </div>
+          <div class="sports-gallery">
+            <article class="sport-card image-slot">
+              <img src="/static/images/sports/footbal.webp" alt="Football" />
+              <div class="sport-card-content">
+                <h3>Football</h3>
+                <p>Un terrain pour les entraînements et les compétitions.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="sport-card image-slot">
+              <img
+                src="/static/images/sports/basketball.webp"
+                alt="Basket-ball"
+              />
+              <div class="sport-card-content">
+                <h3>Basket-ball</h3>
+                <p>
+                  Des installations pour l'entraînement et l'épanouissement
+                  sportif.
+                </p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="sport-card image-slot">
+              <img src="/static/images/sports/volley.jpeg" alt="Volley-ball" />
+              <div class="sport-card-content">
+                <h3>Volley-ball</h3>
+                <p>Une pratique collective stimulante et accessible.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="sport-card image-slot">
+              <img src="/static/images/sports/tennis.jpeg" alt="Tennis" />
+              <div class="sport-card-content">
+                <h3>Tennis</h3>
+                <p>Des courts pour la détente et les tournois.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-soft">
+        <div class="container">
+          <div class="section-title">
+            <h2>Infrastructures</h2>
+            <p>Des équipements utiles pour apprendre, pratiquer et servir.</p>
+          </div>
+          <div class="media-card-grid">
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/polyclinique.webp"
+                  alt="Polyclinique Universitaire"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Polyclinique Universitaire</h3>
+                <p>Un service médical accessible pour la communauté.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/geusthouse (2).webp"
+                  alt="Guest House"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Guest House</h3>
+                <p>Hébergement pour visiteurs et partenaires assistants.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/bibliotheaque.webp"
+                  alt="Bibliothèque"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Bibliothèque</h3>
+                <p>Un lieu calme pour l’étude, la lecture et la recherche.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/laboratoireistm.webp"
+                  alt="Laboratoires"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Laboratoires</h3>
+                <p>Des espaces de pratique et d’expérimentation.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/restaurant.jpeg"
+                  alt="Restaurant Universitaire"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Restaurant Universitaire</h3>
+                <p>Des espaces conviviaux pour bien se restaurer.</p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/cafeteriat.jpeg"
+                  alt="Cafétéria"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Cafétéria</h3>
+                <p>
+                  Un espace pratique pour les pauses et rencontres sur le
+                  campus.
+                </p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+
+            <!-- Dortoirs Universitaires -->
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/homme.jpeg"
+                  alt="Dortoir des Garçons"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Dortoir des Garçons Interne</h3>
+                <p>
+                  L'Université Adventiste de Lukanga met à la disposition des
+                  dortoirs pour garçons offrAnt un environnement sécurisé, calme
+                  et favorable aux études
+                </p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/atlanta.webp"
+                  alt="Dortoir des Garçons"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>Dortoir des Garçons Semi-interne</h3>
+                <p>
+                  L'Université Adventiste de Lukanga met à la disposition des
+                  étudiants des dortoirs
+                </p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img src="/static/images/plaza.webp" alt="Dortoir des Filles" />
+              </div>
+              <div class="media-card-body">
+                <h3>Dortoir des Filles Plaza</h3>
+                <p>
+                  L'Université Adventiste de Lukanga met à la disposition des
+                  étudiantes pour filles. calme et favorable aux études,
+                  permettant aux étudiantes de vivre dans de bonnes conditions
+                  tout au long de leur parcours académique.
+                </p>
+                <a class="button button-primary" href="/campus">Découvrir</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-soft" id="centres-recherche">
+        <div class="container">
+          <div class="section-title">
+            <h2>Centres de Recherche et d'Innovation</h2>
+            <p>
+              Des espaces dédiés à l’innovation, à l’analyse et à la publication
+              scientifique.
+            </p>
+          </div>
+
+          <div class="media-card-grid">
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/gaci.webp"
+                  alt="GACI"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>GACI</h3>
+                <p>
+                  <strong
+                    >Groupe des Analystes Chercheurs Informaticiens</strong
+                  >
+                </p>
+                <p>
+                  Le GACI regroupe les étudiants et enseignants en informatique
+                  afin de promouvoir la recherche scientifique, le développement
+                  de logiciels, l'analyse des systèmes informatiques,
+                  l'intelligence artificielle, la cybersécurité, les réseaux et
+                  télécommunications ainsi que les projets innovants.
+                </p>
+              </div>
+            </article>
+
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/biblio.webp"
+                  alt="GREG"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>GREG</h3>
+                <p>
+                  <strong>Groupe de Réflexion en Économie et Gestion</strong>
+                </p>
+                <p>
+                  Le GREG encourage les recherches, les analyses économiques, la
+                  gestion, l'entrepreneuriat, les conférences et les
+                  publications scientifiques afin de contribuer au développement
+                  économique et social.
+                </p>
+              </div>
+            </article>
+
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/polyclinique.webp"
+                  alt="GACIM"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>GACIM</h3>
+                <p>
+                  <strong
+                    >Groupe des Analystes Chercheurs en Imagerie
+                    Médicale</strong
+                  >
+                </p>
+                <p>
+                  Le GACIM accompagne les étudiants dans les recherches en
+                  imagerie médicale, les nouvelles technologies de diagnostic,
+                  l'innovation en santé et le développement des compétences
+                  scientifiques.
+                </p>
+              </div>
+            </article>
+
+            <article class="media-card">
+              <div class="media-card-image image-slot">
+                <img
+                  src="/static/images/infrastructures/livres (2).webp"
+                  alt="FRIDI"
+                />
+              </div>
+              <div class="media-card-body">
+                <h3>FRIDI</h3>
+                <p>
+                  <strong
+                    >Foyer de Recherche pour le Développement Intégré et la
+                    publication de Livres, Journaux et Articles</strong
+                  >
+                </p>
+                <p>
+                  Le FRIDI accompagne les étudiants et les enseignants dans la
+                  recherche scientifique, la rédaction, la publication et la
+                  diffusion de livres, de journaux, d'articles scientifiques et
+                  d'autres travaux académiques.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-soft">
+        <div class="container">
+          <div class="section-title">
+            <h2>Actualités</h2>
+
+            <p>
+              Événements, initiatives et annonces institutionnelles à suivre.
+            </p>
+          </div>
+          <div class="cards-grid">
+            <div class="card">
+              <div class="news-card-image image-slot">
+                <img
+                  src="/static/images/actualites/forum.webp"
+                  alt="Forum des carrières"
+                />
+              </div>
+              <h3>Forum des carrières</h3>
+              <p>
+                Rencontres avec des professionnels et ateliers de préparation à
+                l’emploi.
+              </p>
+            </div>
+            <div class="card">
+              <div class="news-card-image image-slot">
+                <img
+                  src="/static/images/actualites/actualite.webp"
+                  alt="Journée scientifique"
+                />
+              </div>
+              <h3>Journée scientifique</h3>
+              <p>
+                Présentation de projets étudiants et échanges entre
+                enseignants-chercheurs.
+              </p>
+            </div>
+            <div class="card">
+              <div class="news-card-image image-slot">
+                <img
+                  src="/static/images/actualites/admission.webp"
+                  alt="Programme de solidarité"
+                />
+              </div>
+              <h3>Programme de solidarité</h3>
+              <p>
+                Actions sociales menées par la communauté étudiante au service
+                des quartiers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Témoignages</h2>
+            <p>Ce que disent nos étudiants sur l’expérience UNILUK.</p>
+          </div>
+          <div class="testimonial-slider">
+            <div class="testimonial-track">
+              <div class="testimonial-slide">
+                <div class="testimonial-card">
+                  <p>
+                    « UNILUK m’a appris à concilier rigueur académique et
+                    valeurs chrétiennes. J’ai trouvé ma voie. »
+                  </p>
+                  <h4>Libertine Masika</h4>
+                  <span>Étudiante en soins infirmiers</span>
+                </div>
+              </div>
+              <div class="testimonial-slide">
+                <div class="testimonial-card">
+                  <p>
+                    « L’encadrement et les activités sur le campus m’ont aidé à
+                    gagner en confiance et en discipline. »
+                  </p>
+                  <h4>Daniel cheleva.</h4>
+                  <span>Étudiant en économie</span>
+                </div>
+              </div>
+              <div class="testimonial-slide">
+                <div class="testimonial-card">
+                  <p>
+                    « Les infrastructures et l’ambiance spirituelle rendent la
+                    vie estudiantine vraiment motivante. »
+                  </p>
+                  <h4>Blaise Mulekya.</h4>
+                  <span>Étudiant en agronomie</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-soft">
+        <div class="container">
+          <div class="section-title">
+            <h2>Admission</h2>
+            <p>
+              Des conditions claires, un processus simple et un accompagnement
+              efficace.
+            </p>
+          </div>
+          <div class="info-panel">
+            <article>
+              <h3>Conditions</h3>
+              <p>
+                Dossier scolaire valide, motivation, et respect des valeurs
+                institutionnelles.
+              </p>
+            </article>
+            <article>
+              <h3>Documents</h3>
+              <p>
+                Pièce d'identité, relevés de notes, certificat de scolarité et
+                lettre de motivation.
+              </p>
+            </article>
+            <article>
+              <h3>Calendrier</h3>
+              <p>Ouverture selon les filières et les sessions.</p>
+            </article>
+            <article>
+              <h3>Procédure</h3>
+              <p>
+                Remplir le formulaire, déposer les pièces et recevoir le suivi
+                de l'administration.
+              </p>
+            </article>
+          </div>
+          <div style="text-align: center; margin-top: 1.6rem">
+            <a class="button button-primary" href="/inscription">S'inscrire</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <div
+              class="section-title"
+              style="text-align: left; margin-bottom: 1rem"
+            >
+              <h2>Contact</h2>
+              <p>
+                Nous sommes à votre disposition pour répondre à vos questions.
+              </p>
+            </div>
+            <article>
+              <h3>Téléphone</h3>
+              <p>+243 990 687 596</p>
+            </article>
+            <article>
+              <h3>Email</h3>
+              <p>registrar.uniluk@gmail.com</p>
+            </article>
+            <article>
+              <h3>Adresse</h3>
+              <p>Lukanga,Territoire de Lubero,Nord-Kivu,RDC</p>
+            </article>
+          </div>
+          <div class="form-card">
+            <form method="post" action="/contact">
+              <div class="form-grid">
+                <div>
+                  <label for="nom">Nom</label>
+                  <input id="nom" name="nom" type="text" required />
+                </div>
+                <div>
+                  <label for="prenom">Prénom</label>
+                  <input id="prenom" name="prenom" type="text" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required />
+                </div>
+                <div>
+                  <label for="telephone">Téléphone</label>
+                  <input id="telephone" name="telephone" type="tel" required />
+                </div>
+              </div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message"></textarea>
+              <button class="button button-primary" type="submit">
+                Envoyer
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">UNILUK</p>
+          <p>Université Adventiste de Lukanga.</p>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <p>+243 990 687 596</p>
+          <p>registrar.uniluk@gmail.com</p>
+        </div>
+        <div>
+          <p class="footer-title">Adresse</p>
+          <p>Lukanga, Territoire de Lubero, Nord-Kivu, RDC</p>
+        </div>
+        <div>
+          <p class="footer-title">Centres</p>
+          <a class="nav-link" href="/#centres-recherche"
+            >Centres de Recherche</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

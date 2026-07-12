@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard admin | UNILUK</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script defer src="/static/js/script.js"></script>
+</head>
+<body>
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/">UNILUK</a>
+            <div class="header-actions">
+            <a class="button button-primary" href="/admin/logout">Déconnexion</a>
+        </div>
+        </div>
+    </header>
+    <main>
+
+        {# Flash messages #}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="flash-messages">
+            {% for category, message in messages %}
+              <div class="flash flash-{{ category }}">{{ message }}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% endwith %}
+
+        <section class="section admin-shell"><div class="container">
+            <div class="section-title">
+            <h2>Tableau de bord</h2>
+            <p>Vue d'ensemble des inscriptions et activités administratives.</p>
+        </div>
+        <div class="admin-grid">
+            <div class="admin-card">
+            <span style="font-size:2rem; font-weight:800; color:var(--blue-dark);">{{ total }}</span>
+            <h3>Total des inscriptions</h3>
+            <p>Nombre total de candidatures enregistrées.</p>
+        </div>
+        <div class="admin-card">
+            <h3>Dernières inscriptions</h3>
+            <p>Consultez les inscriptions les plus récentes dans l'espace de gestion.</p>
+        </div>
+    </div>
+        <div class="section-title" style="margin-top:2.5rem;">
+            <h3>Inscriptions récentes</h3>
+        </div>
+        <div class="cards-grid">
+            {% for inscription in recent %}
+            <div class="card">
+                <h3>{{ inscription.prenom }} {{ inscription.nom }}</h3>
+                <p>{{ inscription.email }} • {{ inscription.filiere }}</p>
+            </div>
+            {% else %}
+            <div class="card">
+                <p>Aucune inscription trouvée.</p>
+            </div>{% endfor %}</div>
+            <div class="admin-actions">
+                <a class="button button-primary" href="/admin/inscriptions">Voir toutes les inscriptions</a>
+            </div>
+        </div>
+        </section>
+    </main>
+            <footer class="site-footer">
+                <div class="container footer-inner">
+                    <div>
+                <p class="footer-brand">UNILUK</p>
+                <p>Université Adventiste de Lukanga.</p>
+            </div>
+    <div>
+        <p class="footer-title">Contact</p>
+        <p>+243 990 687 596</p>
+        <p>registrar.uniluk@gmail.com</p>
+    </div>
+    <div>
+        <p class="footer-title">Adresse</p>
+        <p>Lukanga,Territoire de Lubero,Nord-Kivu,RDC</p>
+            </div>
+        </footer>
+</body>
+</html>

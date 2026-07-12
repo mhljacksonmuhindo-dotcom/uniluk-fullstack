@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admission | UNILUK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-left">
+          <span><i class="fa-solid fa-envelope"></i>
+            registrar.uniluk@gmail.com</span>
+          <span><i class="fa-solid fa-phone"></i> +243 994 889 570</span>
+        </div>
+        <div class="top-right">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a class="nav-link" href="#decouvrir">Decouvrir</a>
+        </div>
+      </div>
+    </div>
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">UNILUK</a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="/">Accueil</a>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Université</button>
+              <div class="dropdown-menu">
+                <a href="/uniluk">UNILUK</a>
+                <a href="/istm">ISTM</a>
+                <a href="/ista">ISTA</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Campus</button>
+              <div class="dropdown-menu">
+                <a href="/campus">Vie spirituelle</a>
+                <a href="/campus">Sports</a>
+                <a href="/campus">Infrastructures</a>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="/admission">Admission</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/actualites">Actualités</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="button button-primary" href="/inscription">S'inscrire</a>
+          <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Menu mobile"
+          ></button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero page-hero-admission">
+        <div class="container page-hero-content">
+          <p class="eyebrow">Admission</p>
+          <h1>Rejoignez l'Université Adventiste de Lukanga</h1>
+          <p>
+            Un processus simple, transparent et adapté à votre parcours
+            académique.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Les étapes d'admission</h2>
+            <p>Premier pas payer le 10$ pour le frais d'inscription</p>
+            <p>deuxième pas payer le 10$ pour le frais concours d'admission pour les candidats ayant obtenue moins de 60% a l'EXETAT</p>
+          </div>
+          <div class="info-panel">
+            <article>
+              <h3>Conditions</h3>
+              <p>
+                Dossier scolaire valide, motivation claire et respect des
+                valeurs institutionnelles.
+              </p>
+            </article>
+            <article>
+              <h3>Documents</h3>
+              <p>Deux copies du Diplôme de Bse ou de l'Atestation de Reussite (Presenter l'original à la rentrée academique) </p>
+              <p>Une photocopie des bulletins de trois dernieres années du secondaire pour les candidats en L0/L1 </p>
+              <p>Deux copies des relevés de L1,L2,L3 pour les candidats au niveau Master </p>
+              <p>Deux copies des relevés de G1,G2,G3,L1,L2 pour les candidats au Master Complémentaire  </p>
+              <p>Deux copies des relevés de G1,G2,G3 pour les candidats en Licence Complémentaire  </p>
+              <p>Deux photos passeport en couleur </p>
+              <p>Une copie d'attestations : de naissance,de nationalité, de bonne conduite vie et moeurs , de celibat/mariage </p>
+              <p>Copie originale de l'attestation d'aptitude physique la plus recente (datant de 3mois au plus )</p>
+              <p> Photocopie de la carte d'electeur ou identité/passeport (et visa pour les étrangers) </p>
+            </article>
+            <article>
+              <h3>Calendrier</h3>
+              <p>Ouverture continue selon les filières et les sessions.</p>
+            </article>
+            <article>
+              <h3>Procédure</h3>
+              <p>
+                Remplir le formulaire, déposer les pièces et recevoir le suivi
+                de l'administration.
+              </p>
+            </article>
+          </div>
+
+          <div class="section-title" style="margin-top: 2.2rem">
+            <h2>Paiement des frais d'admission</h2>
+            <p>
+              Effectuez votre paiement sur les comptes bancaires officiels
+              ci-dessous.
+            </p>
+          </div>
+
+          <div class="info-panel">
+            <article>
+              <h3>FBN</h3>
+              <p><strong>Compte :</strong> 2080014058623</p>
+            </article>
+            <article>
+              <h3>TMB (USD)</h3>
+              <p><strong>Compte :</strong> 12742-2900077-00-64</p>
+            </article>
+            <article>
+              <h3>TMB (CDF)</h3>
+              <p><strong>Compte :</strong> 28200-2900077101-65</p>
+            </article>
+            <article>
+              <h3>TID (USD) </h3>
+              <p><strong>Compte :</strong> 31287</p>
+            </article>
+          </div>
+
+          <div
+            class="card"
+            style="
+              margin-top: 1.6rem;
+              padding: 1rem 1.2rem;
+              border: 1px solid #d9e3f0;
+              background: #f7fbff;
+            "
+          >
+            <p style="margin: 0; font-weight: 700">Encadré important</p>
+            <p style="margin-top: 0.4rem">
+              Le <strong>reçu bancaire</strong> doit être ajouté dans le
+              <strong>dossier ZIP</strong> avant l’envoi de la demande
+              d’admission.
+            </p>
+          </div>
+
+          <div style="text-align: center; margin-top: 1.6rem">
+            <a class="button button-primary" href="/inscription">S'inscrire</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">UNILUK</p>
+          <p>Université Adventiste de Lukanga.</p>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <p>+243 994 889 570</p>
+          <p>rectorat.uniluk1996@gmail.com</p>
+        </div>
+        <div>
+          <p class="footer-title">Adresse</p>
+          <p>Lukanga, Territoire de Lubero, Nord-Kivu, RDC</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

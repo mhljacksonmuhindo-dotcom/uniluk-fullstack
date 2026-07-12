@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTM | UNILUK</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-left">
+                <span><i class="fa-solid fa-envelope"></i> registrar.uniluk@gmail.com</span>
+                <span><i class="fa-solid fa-phone"></i> +243 994 889 570</span>
+            </div>
+            <div class="top-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a class="nav-link" href="#decouvrir">Decouvrir</a>
+            </div>
+        </div>
+    </div>
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/">ISTM</a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                <li>
+                <a class="nav-link" href="/">Accueil</a>
+            </li>
+                <li class="dropdown">
+                    <button class="dropdown-toggle" type="button">Université</button>
+                    <div class="dropdown-menu">
+                        <a href="/uniluk">UNILUK</a>
+                        <a href="/istm">ISTM</a>
+                        <a href="/ista">ISTA</a>
+                    </div>
+                    </li><li class="dropdown">
+                            <button class="dropdown-toggle" type="button">Campus</button>
+                            <div class="dropdown-menu">
+                                <a href="/campus">Vie spirituelle</a>
+                                <a href="/campus">Sports</a>
+                                <a href="/campus">Infrastructures</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="/admission">Admission</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="/actualites">Actualités</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="/contact">Contact</a>
+                            </li>
+                        </ul>
+                        </nav>
+            <div class="header-actions">
+                <a class="button button-primary" href="/inscription">S'inscrire</a>
+                <button class="burger" id="burger" type="button" aria-label="Menu mobile">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero page-hero-istm">
+            <div class="container page-hero-content">
+                <p class="eyebrow">ISTM</p>
+                <h1>Institut supérieur des sciences médicales et du management</h1>
+                <p>Une formation de santé de qualité, pratique et orientée vers l'excellence clinique.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container grid-2">
+                <div>
+                    <div class="section-title" style="text-align:left; margin-bottom:1.2rem;">
+                        <h2>Notre vocation</h2>
+                        <p>Former des professionnels de santé compétents et respectueux des valeurs humaines.</p></div>
+                    <p>ISTM prépare des agents de santé capables d'intervenir avec professionnalisme dans les structures hospitalières, cliniques et communautaires. La formation combine savoir scientifique, pratique, éthique et service.</p>
+                </div>
+                <div class="image-frame">
+                    <img src="/static/images/laboratoireistm.webp" alt="Laboratoire ISTM">
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-soft">
+            <div class="container">
+                <div class="section-title"><h2>Filières ISTM</h2><p>Des parcours adaptés aux métiers de la santé moderne.</p></div>
+                <div class="cards-grid">
+                    <div class="card"><h3>Soins infirmiers généraux</h3><p>Une base solide pour accompagner et soigner les patients.</p></div>
+                    <div class="card"><h3>Imagerie médicale</h3><p>Compétences techniques en radiologie et diagnostic.</p></div>
+                    <div class="card"><h3>Technique de laboratoire</h3><p>Analyse biomédicale et support des diagnostics.</p></div>
+                    <div class="card"><h3>Sage-femme</h3><p>Prise en charge de la santé maternelle et infantile.</p></div>
+                    <div class="card"><h3>Pédiatrie</h3><p>Soins spécialisés pour les enfants et la famille.</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner"><div>
+        <p class="footer-brand">UNILUK</p>
+        <p>Université Adventiste de Lukanga.</p></div>
+        <div>
+            <p class="footer-title">Contact</p>
+            <p>+243 994 889 570</p>
+            <p>registrar.uniluk@gmail.com</p>
+        </div>
+        <div>
+            <p class="footer-title">Adresse</p>
+            <p> Lukanga,Territoire de Lubero,Nord-Kivu,RDC</p>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>

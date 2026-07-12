@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Université | UNILUK</title>   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>    
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-left">
+                <span><i class="fa-solid fa-envelope"></i> registrar.uniluk@gmail.com</span>
+                <span><i class="fa-solid fa-phone"></i> +243 990 687 596</span>
+            </div>
+            <div class="top-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a class="nav-link" href="#decouvrir">Decouvrir</a>
+            </div>
+        </div>
+    </div>
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/">UNILUK</a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li>
+                        <a class="nav-link" href="/">Accueil</a>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropdown-toggle" type="button">Université</button>
+                        <div class="dropdown-menu">
+                            <a href="/uniluk">UNILUK</a>
+                            <a href="/istm">ISTM</a>
+                            <a href="/ista">ISTA</a>
+                        </div></li>
+                    <li class="dropdown">
+                        <button class="dropdown-toggle" type="button">Campus</button>
+                        <div class="dropdown-menu"><a href="/campus">Vie spirituelle</a>
+                            <a href="/campus">Sports</a>
+                            <a href="/campus">Infrastructures</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-link" href="/admission">Admission</a>
+                    </li>
+                    <li><a class="nav-link" href="/actualites">Actualités</a>
+                    </li>
+                    <li><a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a class="button button-primary" href="/inscription">S'inscrire</a>
+                <button class="burger" id="burger" type="button" aria-label="Menu mobile"></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container page-hero-content">
+                <p class="eyebrow">L'Université Adventiste de Lukanga</p>
+                <h1>Une institution d'excellence au service des talents congolais</h1>
+                <p>UNILUK réunit savoir, valeurs chrétiennes et esprit d'innovation dans un cadre moderne et accueillant.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container grid-2">
+                <div>
+                    <div class="section-title" style="text-align:left; margin-bottom:1.2rem;">
+                        <h2>Présentation</h2>
+                        <p>Une université qui forme des leaders responsables et compétents.</p>
+                    </div>
+                    <p>UNILUK propose une offre académique diversifiée, allant des sciences humaines et sociales aux sciences exactes et appliquées. Son modèle pédagogique met l'accent sur la rigueur, l'éthique, la pratique et l'encadrement.</p>
+                    <p>Les étudiants bénéficient d'espaces d'études modernes, d'installations sportives et d'une vie campus riche et dynamique.</p>
+                </div>
+                <div class="image-frame">
+                    <img src="/static/images/library.webp" alt="Bibliothèque UNILUK">
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-soft">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Filières de l'UNILUK</h2>
+                    <p>Des parcours académiques structurés pour répondre aux besoins du monde contemporain.</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Sciences théologiques</h3>
+                        <p>Éthique, mission et leadership spirituel.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Sciences économiques</h3>
+                        <p>Gestion, comptabilité et finance appliquées.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Sciences informatiques</h3>
+                        <p>Technologies numériques et systèmes d'information.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Sciences agronomiques</h3>
+                        <p>Agriculture durable et développement rural.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Sciences de l'éducation</h3><p>Formation des enseignants et cadres pédagogiques.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Médecine</h3>
+                        <p>Nutrition, santé publique et services communautaires.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <p class="footer-brand">UNILUK</p>
+        <p>Université Adventiste de Lukanga.</p>
+    </div>
+    <div>
+        <p class="footer-title">Contact</p>
+        <p>+243 990 670 596</p>
+            <p>registrar.uniluk@gmail.com</p>
+        </div>
+            <div>
+                <p class="footer-title">Adresse</p>
+                <p>Lukanga,Territoire de Lubero,Nord-Kivu,RDC</p>
+            </div>
+            </div>
+            </footer>
+</body>
+</html>

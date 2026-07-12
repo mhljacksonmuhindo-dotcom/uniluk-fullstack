@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modifier inscription | UNILUK</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <script defer src="/static/js/script.js"></script>
+  </head>
+  <body>
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">UNILUK</a>
+        <div class="header-actions">
+          <a class="button button-primary" href="/admin/inscriptions">Retour</a>
+          <a class="button button-secondary" href="/admin/logout">Déconnexion</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section admin-shell">
+        <div class="container" style="max-width: 780px">
+          <div class="section-title">
+            <h2>Modifier l'inscription</h2>
+            <p>Mettre à jour les informations du candidat.</p>
+          </div>
+          <div class="form-card">
+            <form
+              method="post"
+              action="/admin/inscriptions/edit/{{ inscription.id if inscription.id is defined else inscription['id'] }}"
+            >
+              <div class="form-grid">
+                <div>
+                  <label for="nom">Nom</label>
+                  <input
+                    id="nom"
+                    name="nom"
+                    type="text"
+                    value="{{ inscription.nom if inscription.nom is defined else inscription['nom'] }}"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="prenom">Prénom</label>
+                  <input
+                    id="prenom"
+                    name="prenom"
+                    type="text"
+                    value="{{ inscription.prenom if inscription.prenom is defined else inscription['prenom'] }}"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="sexe">Sexe</label>
+                  <select id="sexe" name="sexe" required>
+                    <option
+                      value="Masculin"
+                      {% if inscription.sexe == "Masculin" or inscription['sexe'] == "Masculin" %}selected{% endif %}
+                    >
+                      Masculin
+                    </option>
+                    <option
+                      value="Féminin"
+                      {% if inscription.sexe == "Féminin" or inscription['sexe'] == "Féminin" %}selected{% endif %}
+                    >
+                      Féminin
+                    </option>
+                  </select>
+                </div>
+                <div>
+                  <label for="date_naissance">Date de naissance</label>
+                  <input
+                    id="date_naissance"
+                    name="date_naissance"
+                    type="date"
+                    value="{{ inscription.date_naissance if inscription.date_naissance is defined else inscription['date_naissance'] }}"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="telephone">Téléphone</label>
+                  <input
+                    id="telephone"
+                    name="telephone"
+                    type="tel"
+                    value="{{ inscription.telephone if inscription.telephone is defined else inscription['telephone'] }}"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value="{{ inscription.email if inscription.email is defined else inscription['email'] }}"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="province">Province</label>
+                  <input
+                    id="province"
+                    name="province"
+                    type="text"
+                    value="{{ inscription.province if inscription.province is defined else inscription['province'] }}"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="ville">Ville</label>
+                  <input
+                    id="ville"
+                    name="ville"
+                    type="text"
+                    value="{{ inscription.ville if inscription.ville is defined else inscription['ville'] }}"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="adresse">Adresse</label>
+                  <input
+                    id="adresse"
+                    name="adresse"
+                    type="text"
+                    value="{{ inscription.adresse if inscription.adresse is defined else inscription['adresse'] }}"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="etablissement">Établissement</label>
+                  <input
+                    id="etablissement"
+                    name="etablissement"
+                    type="text"
+                    value="{{ inscription.etablissement if inscription.etablissement is defined else inscription['etablissement'] }}"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="filiere">Filière</label>
+                  <select id="filiere" name="filiere" required>
+                    {% for option in ['Sciences théologiques', 'Sciences économiques', 'Sciences informatiques', 'Sciences agronomiques', 'Sciences de l\'education', 'Medecine', 'Lettres', 'Soins infirmiers généraux', 'Imagerie médicale', 'Technique de laboratoire', 'Sage-femme', 'Pédiatrie', 'Préparatoire', 'Bâtiment et Travaux Publics', 'Architecture'] %}
+                    <option
+                      value="{{ option }}"
+                      {% if inscription.filiere == option or inscription['filiere'] == option %}selected{% endif %}
+                    >
+                      {{ option }}
+                    </option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <div style="grid-column: 1 / -1">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message">{% if inscription.message is defined %}{{ inscription.message }}{% else %}{{ inscription['message'] }}{% endif %}</textarea>
+                </div>
+
+                <div style="grid-column: 1 / -1">
+                  <p style="margin: 1rem 0 0; font-weight:700;">Dossier ZIP</p>
+                  {% if inscription.dossier_zip_path is defined and inscription.dossier_zip_path %}
+                    <p style="margin: 0.3rem 0 0;">{{ inscription.dossier_zip_path }}</p>
+                    <a class="button button-secondary" href="/admin/inscriptions/zip/{{ inscription.id if inscription.id is defined else inscription['id'] }}" style="margin-top:0.6rem;">Télécharger</a>
+                  {% else %}
+                    <p style="margin: 0.3rem 0 0;">Non disponible</p>
+                  {% endif %}
+                </div>
+              </div>
+              <button class="button button-primary" type="submit">
+                Sauvegarder
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">UNILUK</p>
+          <p>Université Adventiste de Lukanga.</p>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <p>+243 990 687 596</p>
+          <p>registrar.uniluk@gmail.com</p>
+        </div>
+        <div>
+          <p class="footer-title">Adresse</p>
+          <p>Lukanga,Territoire de Lubero,Nord-Kivu,RDC</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

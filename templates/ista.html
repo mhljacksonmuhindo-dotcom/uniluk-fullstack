@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISTA | UNILUK</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script
+      defer
+      src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-left">
+          <span
+            ><i class="fa-solid fa-envelope"></i>
+            registrar.uniluk@gmail.com</span
+          >
+          <span><i class="fa-solid fa-phone"></i> +243 990 687 596</span>
+        </div>
+        <div class="top-right">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a class="nav-link" href="#decouvrir">Decouvrir</a>
+        </div>
+      </div>
+    </div>
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">ISTA</a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="/">Accueil</a>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Université</button>
+              <div class="dropdown-menu">
+                <a href="/uniluk">UNILUK</a>
+                <a href="/istm">ISTM</a>
+                <a href="/ista">ISTA</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Campus</button>
+              <div class="dropdown-menu">
+                <a href="/campus">Vie spirituelle</a>
+                <a href="/campus">Sports</a>
+                <a href="/campus">Infrastructures</a>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="/admission">Admission</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/actualites">Actualités</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="button button-primary" href="/inscription">S'inscrire</a>
+          <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Menu mobile"
+          ></button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero-ista">
+        <div class="container page-hero-content">
+          <p class="eyebrow">ISTA Lukanga/Beni</p>
+          <h1>Institut supérieur des techniques appliquées</h1>
+          <p>
+            Des formations techniques et professionnelles orientées vers la
+            pratique, l'innovation et la durabilité.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid-2">
+          <div>
+            <div
+              class="section-title"
+              style="text-align: left; margin-bottom: 1.2rem"
+            >
+              <h2>Notre approche</h2>
+              <p>Former des professionnels prêts à construire et à innover.</p>
+            </div>
+            <p>
+              ISTA offre des formations techniques solides dans les domaines du
+              bâtiment, des travaux publics et de l'architecture. L'accent est
+              mis sur la rigueur, la créativité et l'impact concret sur le
+              territoire.
+            </p>
+            <p>Nous sommes baser dans la ville de Beni kalinda makambanye</p>
+          </div>
+          <div class="image-frame">
+            <img src="/static/images/PICK.webp" alt="Campus ISTA" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-soft">
+        <div class="container">
+          <div class="section-title">
+            <h2>Filières ISTA</h2>
+            <p>Des parcours adaptés aux métiers du BTP et de l'architecture.</p>
+          </div>
+          <div class="cards-grid">
+            <div class="card">
+              <h3>Préparatoire</h3>
+              <p>Une base solide pour les études techniques.</p>
+            </div>
+            <div class="card">
+              <h3>Bâtiment et Travaux Publics</h3>
+              <p>
+                Compétences pour la conception et la réalisation
+                d'infrastructures.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Architecture</h3>
+              <p>
+                Design, conception et aménagement pour des projets durables.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">UNILUK</p>
+          <p>Université Adventiste de Lukanga.</p>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <p>+243 990 687 596</p>
+          <p>registrar.uniluk@gmail.com</p>
+        </div>
+        <div>
+          <p class="footer-title">Adresse</p>
+          <p>Lukanga,Territoire de Lubero,Nord-Kivu,RDC</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

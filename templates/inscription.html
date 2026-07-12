@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription | UNILUK</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script
+      defer
+      src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-left">
+          <span
+            ><i class="fa-solid fa-envelope"></i>
+            registrar.uniluk@gmail.com</span
+          >
+          <span><i class="fa-solid fa-phone"></i> +243 990 687 596</span>
+        </div>
+        <div class="top-right">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a class="nav-link" href="#decouvrir">Decouvrir</a>
+        </div>
+      </div>
+    </div>
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">UNILUK</a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="/">Accueil</a>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Université</button>
+              <div class="dropdown-menu">
+                <a href="/uniluk">UNILUK</a>
+                <a href="/istm">ISTM</a>
+                <a href="/ista">ISTA</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">Campus</button>
+              <div class="dropdown-menu">
+                <a href="/campus">Vie spirituelle</a>
+                <a href="/campus">Sports</a>
+                <a href="/campus">Infrastructures</a>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="/admission">Admission</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/actualites">Actualités</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="button button-primary" href="/inscription">S'inscrire</a>
+          <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Menu mobile"
+          ></button>
+        </div>
+      </div>
+    </header>
+    <main>
+
+      
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for category, message in messages %}
+            <div class="flash flash-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% endwith %}
+
+      <section class="page-hero">
+        <div class="container page-hero-content">
+          <p class="eyebrow">Inscription</p>
+          <h1>Créer votre parcours à UNILUK</h1>
+          <p>
+            Remplissez le formulaire ci-dessous pour entamer votre candidature.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Formulaire de candidature</h2>
+            <p>
+              Les informations demandées sont nécessaires pour traiter votre
+              dossier.
+            </p>
+          </div>
+          <div class="form-card">
+            <form
+              method="post"
+              action="/inscription"
+              enctype="multipart/form-data"
+            >
+              <div class="form-grid">
+                <!-- Informations personnelles -->
+                <div>
+                  <label for="nom">Nom</label>
+                  <input id="nom" name="nom" type="text" required />
+                </div>
+                <div>
+                  <label for="postnom">Postnom</label>
+                  <input id="postnom" name="postnom" type="text" required />
+                </div>
+                <div>
+                  <label for="prenom">Prénom</label>
+                  <input id="prenom" name="prenom" type="text" required />
+                </div>
+                <div>
+                  <label for="sexe">Sexe</label>
+                  <select id="sexe" name="sexe" required>
+                    <option value="">Sélectionnez</option>
+                    <option value="Masculin">Masculin</option>
+                    <option value="Féminin">Féminin</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="lieu_naissance">Lieu de naissance</label>
+                  <input
+                    id="lieu_naissance"
+                    name="lieu_naissance"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="date_naissance">Date de naissance</label>
+                  <input
+                    id="date_naissance"
+                    name="date_naissance"
+                    type="date"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="nationalite">Nationalité</label>
+                  <input
+                    id="nationalite"
+                    name="nationalite"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="etat_civil">État civil</label>
+                  <input
+                    id="etat_civil"
+                    name="etat_civil"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="religion">Religion</label>
+                  <input id="religion" name="religion" type="text" required />
+                </div>
+                  <!-- Résidence -->
+                <div>
+                  <label for="residence">Résidence</label>
+                  <select id="residence" name="residence" required>
+                    <option value="">Sélectionnez</option>
+                    <option value="Interne">Interne</option>
+                    <option value="Semi-interne">Semi-interne</option>
+                    <option value="Externe">Externe</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="nom_dortoir">Nom du dortoir</label>
+                   <select id="nom_dortoir" name="nom_dortoir" required>
+                    <option value="">Sélectionnez</option>
+                    <option value="Interne">Plaza</option>
+                    <option value="Semi-interne">Antlanta</option>
+                    <option value="interne">Home</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="nom_quartier">Nom du quartier pour les externes</label>
+                  <input
+                    id="nom_quartier"
+                    name="nom_quartier"
+                    type="text"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <label for="telephone">Téléphone</label>
+                  <input id="telephone" name="telephone" type="tel" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required />
+                </div>
+                <div>
+                  <label for="groupe_sanguin">Groupe sanguin</label>
+                  <input
+                    id="groupe_sanguin"
+                    name="groupe_sanguin"
+                    type="text"
+                    required
+                  />
+                </div>
+                
+                <!-- Parents -->
+                <div>
+                  <label for="nom_pere">Nom du père</label>
+                  <input id="nom_pere" name="nom_pere" type="text" required />
+                </div>
+                <div>
+                  <label for="nom_mere">Nom de la mère</label>
+                  <input id="nom_mere" name="nom_mere" type="text" required />
+                </div>
+
+                <!-- Responsable financier -->
+                <div>
+                  <label for="nom_responsable_financier">Nom du responsable de finance</label>
+                  <input
+                    id="nom_responsable_financier"
+                    name="nom_responsable_financier"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="telephone_responsable_financier">Téléphone du rensponsable</label>
+                  <input
+                    id="telephone_responsable_financier"
+                    name="telephone_responsable_financier"
+                    type="tel"
+                    required
+                  />
+                </div>
+                
+              
+                <!-- Profession antérieure -->
+                <div>
+                  <label for="profession_anterieure"
+                    >Profession antérieure</label
+                  >
+                  <input
+                    id="profession_anterieure"
+                    name="profession_anterieure"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="adresse">Adresse</label>
+                  <input id="adresse" name="adresse" type="text" placeholder="adres" required />
+                </div>
+
+                <!-- Études antérieures -->
+              
+                <div>
+                  <label for="annee_scolaire">Année scolaire/academique :</label>
+                  <input  placeholder="anne scolaire ou academique"
+                    id="annee_scolaire"
+                    name="annee_scolaire"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="etablissement_fréquenté"
+                    >Établissement fréquenté</label
+                  >
+                  <input
+                    id="etablissement_fréquenté"
+                    name="etablissement"
+                    type="text"
+                    placeholder="Entrez l’établissement" 
+                  />
+                </div>
+                <div>
+                  <label for="diplome_obtenu">Diplôme obtenu</label>
+                  <input placeholder="diplome obtenu"
+                    id="diplome_obtenu"
+                    name="diplome_obtenu"
+                    type="text"
+                    required
+                  />
+                </div>
+                
+                <!-- Choix académique -->
+                <div>
+                  <label for="domaine">Domaine</label>
+                  <input id="domaine" name="domaine" placeholder="votre domaine" type="text" required />
+                </div>
+                <div>
+                  <label for="faculte">Faculté</label>
+                  <input id="faculte" name="faculte" type="text" placeholder="Votre faculté" required />
+                </div>
+                <div>
+                  <label for="filiere">Filière</label>
+                  <select id="filiere" name="filiere" required>
+                    <option value="">Sélectionnez</option>
+                    <option>Sciences théologiques</option>
+                    <option>Sciences économiques</option>
+                    <option>Sciences informatiques</option>
+                    <option>Sciences agronomiques</option>
+                    <option>Sciences de l'éducation</option>
+                    <option>Médecine</option>
+                    <option>Soins infirmiers généraux</option>
+                    <option>Imagerie médicale</option>
+                    <option>Technique de laboratoire</option>
+                    <option>Sage-femme</option>
+                    <option>Pédiatrie</option>
+                    <option>Préparatoire</option>
+                    <option>Bâtiment et Travaux Publics</option>
+                    <option>Architecture</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="mention">Mention </label>
+                  <input id="mention" name="mention" type="text"  placeholder="la mention" required />
+                </div>
+                <div>
+                  <label for="promotion">Promotion</label>
+                  <select id="promotion" name="promotion"  required > 
+                  <option value="">Sélectionnez</option>
+                  <option value="L0">L0</option>
+                  <option value="L1">L1</option>
+                  <option value="L2">L2</option>
+                  <option value="L3">L3</option>
+                  <option value="M0">M0</option>
+                  <option value="M1">M1</option>
+                  <option value="M2">M2</option>
+                  <option value="MC">M.C</option>
+                  <option value="ML">M.L</option>
+                  </select>
+                </div>
+              </div>    
+
+                <!-- Dossier ZIP -->
+                <div>
+                  <label for="dossier_zip"
+                    >Téléverser le dossier d'admission (ZIP)</label
+                  >
+                  <input
+                    id="dossier_zip"
+                    name="dossier_zip"
+                    type="file"
+                    accept=".zip"
+                    required
+                  />
+                </div>
+                <div style="grid-column: 1 / -1">
+                  <p style="margin: 0">
+                    Le ZIP doit contenir : Diplôme, Bulletins, Photo,
+                    Attestation de naissance, Certificat médical, Reçu bancaire frais inscription et admission,
+                    et toutes les autres pièces exigées.
+                  </p>
+                </div>            
+              <button class="button button-primary" type="submit">
+                Envoyer l'inscription
+              </button>
+            </form>
+          </div>
+        </div>
+         </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">UNILUK</p>
+          <p>Université Adventiste de Lukanga.</p>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <p>+243 990 687 596</p>
+          <p>registrar.uniluk@gmail.com</p>
+        </div>
+        <div>
+          <p class="footer-title">Adresse</p>
+          <p>Lukanga,Territoire de Lubero,Nord-Kivu,RDC</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
