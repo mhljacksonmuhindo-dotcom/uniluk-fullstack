@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenu = document.querySelector(".mobile-menu");
   const backToTop = document.createElement("a");
 
-  // Ne modifier que l’icône existante (pas de création/d’ajout de nœud)
   const syncBurgerIcon = (isOpen) => {
     if (!burger) return;
 
