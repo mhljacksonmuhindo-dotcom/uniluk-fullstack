@@ -4,16 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admission | UNILUK</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script
+      defer
+      src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
   </head>
   <body>
     <div class="top-bar">
       <div class="container">
         <div class="top-left">
-          <span><i class="fa-solid fa-envelope"></i>
-            registrar.uniluk@gmail.com</span>
+          <span
+            ><i class="fa-solid fa-envelope"></i>
+            registrar.uniluk@gmail.com</span
+          >
           <span><i class="fa-solid fa-phone"></i> +243 994 889 570</span>
         </div>
         <div class="top-right">
@@ -70,6 +81,32 @@
         </div>
       </div>
     </header>
+
+    <nav class="mobile-menu" aria-label="Menu mobile">
+      <a class="mobile-nav-item" href="/">Accueil</a>
+
+      <div class="mobile-nav-item mobile-dropdown">
+        <span>Université</span>
+        <a href="/uniluk">UNILUK</a>
+        <a href="/istm">ISTM</a>
+        <a href="/ista">ISTA</a>
+      </div>
+
+      <div class="mobile-nav-item mobile-dropdown">
+        <span>Campus</span>
+        <a href="/campus">Vie spirituelle</a>
+        <a href="/campus">Sports</a>
+        <a href="/campus">Infrastructures</a>
+      </div>
+
+      <a class="mobile-nav-item" href="/admission">Admission</a>
+      <a class="mobile-nav-item" href="/actualites">Actualités</a>
+      <a class="mobile-nav-item" href="/#centres-recherche"
+        >Centres de Recherche</a
+      >
+      <a class="mobile-nav-item" href="/contact">Contact</a>
+    </nav>
+
     <main>
       <section class="page-hero page-hero-admission">
         <div class="container page-hero-content">
@@ -86,7 +123,10 @@
           <div class="section-title">
             <h2>Les étapes d'admission</h2>
             <p>Premier pas payer le 10$ pour le frais d'inscription</p>
-            <p>deuxième pas payer le 10$ pour le frais concours d'admission pour les candidats ayant obtenue moins de 60% a l'EXETAT</p>
+            <p>
+              deuxième pas payer le 10$ pour le frais concours d'admission pour
+              les candidats ayant obtenue moins de 60% a l'EXETAT
+            </p>
           </div>
           <div class="info-panel">
             <article>
@@ -98,15 +138,39 @@
             </article>
             <article>
               <h3>Documents</h3>
-              <p>Deux copies du Diplôme de Bse ou de l'Atestation de Reussite (Presenter l'original à la rentrée academique) </p>
-              <p>Une photocopie des bulletins de trois dernieres années du secondaire pour les candidats en L0/L1 </p>
-              <p>Deux copies des relevés de L1,L2,L3 pour les candidats au niveau Master </p>
-              <p>Deux copies des relevés de G1,G2,G3,L1,L2 pour les candidats au Master Complémentaire  </p>
-              <p>Deux copies des relevés de G1,G2,G3 pour les candidats en Licence Complémentaire  </p>
-              <p>Deux photos passeport en couleur </p>
-              <p>Une copie d'attestations : de naissance,de nationalité, de bonne conduite vie et moeurs , de celibat/mariage </p>
-              <p>Copie originale de l'attestation d'aptitude physique la plus recente (datant de 3mois au plus )</p>
-              <p> Photocopie de la carte d'electeur ou identité/passeport (et visa pour les étrangers) </p>
+              <p>
+                Deux copies du Diplôme de Bse ou de l'Atestation de Reussite
+                (Presenter l'original à la rentrée academique)
+              </p>
+              <p>
+                Une photocopie des bulletins de trois dernieres années du
+                secondaire pour les candidats en L0/L1
+              </p>
+              <p>
+                Deux copies des relevés de L1,L2,L3 pour les candidats au niveau
+                Master
+              </p>
+              <p>
+                Deux copies des relevés de G1,G2,G3,L1,L2 pour les candidats au
+                Master Complémentaire
+              </p>
+              <p>
+                Deux copies des relevés de G1,G2,G3 pour les candidats en
+                Licence Complémentaire
+              </p>
+              <p>Deux photos passeport en couleur</p>
+              <p>
+                Une copie d'attestations : de naissance,de nationalité, de bonne
+                conduite vie et moeurs , de celibat/mariage
+              </p>
+              <p>
+                Copie originale de l'attestation d'aptitude physique la plus
+                recente (datant de 3mois au plus )
+              </p>
+              <p>
+                Photocopie de la carte d'electeur ou identité/passeport (et visa
+                pour les étrangers)
+              </p>
             </article>
             <article>
               <h3>Calendrier</h3>
@@ -143,7 +207,7 @@
               <p><strong>Compte :</strong> 28200-2900077101-65</p>
             </article>
             <article>
-              <h3>TID (USD) </h3>
+              <h3>TID (USD)</h3>
               <p><strong>Compte :</strong> 31287</p>
             </article>
           </div>

@@ -81,7 +81,34 @@
         </div>
       </div>
     </header>
+
+    <nav class="mobile-menu" aria-label="Menu mobile">
+
+      
+      <a class="mobile-nav-item" href="/">Accueil</a>
+
+      <div class="mobile-nav-item mobile-dropdown">
+        <span>Université</span>
+        <a href="/uniluk">UNILUK</a>
+        <a href="/istm">ISTM</a>
+        <a href="/ista">ISTA</a>
+      </div>
+
+      <div class="mobile-nav-item mobile-dropdown">
+        <span>Campus</span>
+        <a href="/campus">Vie spirituelle</a>
+        <a href="/campus">Sports</a>
+        <a href="/campus">Infrastructures</a>
+      </div>
+
+      <a class="mobile-nav-item" href="/admission">Admission</a>
+      <a class="mobile-nav-item" href="/actualites">Actualités</a>
+      <a class="mobile-nav-item" href="/#centres-recherche">Centres de Recherche</a>
+      <a class="mobile-nav-item" href="/contact">Contact</a>
+    </nav>
+
     <main>
+
 
       
       {% with messages = get_flashed_messages(with_categories=true) %}
@@ -122,15 +149,15 @@
                 <!-- Informations personnelles -->
                 <div>
                   <label for="nom">Nom</label>
-                  <input id="nom" name="nom" type="text" required />
+                  <input id="nom" name="nom" type="text" placeholder="votre nom" required />
                 </div>
                 <div>
                   <label for="postnom">Postnom</label>
-                  <input id="postnom" name="postnom" type="text" required />
+                  <input id="postnom" name="postnom" type="text" placeholder="votre postnom" required />
                 </div>
                 <div>
                   <label for="prenom">Prénom</label>
-                  <input id="prenom" name="prenom" type="text" required />
+                  <input id="prenom" name="prenom" type="text"  placeholder=" votre Prenom" required />
                 </div>
                 <div>
                   <label for="sexe">Sexe</label>
@@ -145,7 +172,7 @@
                   <input
                     id="lieu_naissance"
                     name="lieu_naissance"
-                    type="text"
+                    type="text" placeholder="Votre lieu de naissance"
                     required
                   />
                 </div>
@@ -154,7 +181,7 @@
                   <input
                     id="date_naissance"
                     name="date_naissance"
-                    type="date"
+                    type="date" placeholder="Votre date de naissance"
                     required
                   />
                 </div>
@@ -163,7 +190,7 @@
                   <input
                     id="nationalite"
                     name="nationalite"
-                    type="text"
+                    type="text" placeholder="Votre  nationalite"
                     required
                   />
                 </div>
@@ -172,13 +199,13 @@
                   <input
                     id="etat_civil"
                     name="etat_civil"
-                    type="text"
+                    type="text" placeholder="votre etat civil"
                     required
                   />
                 </div>
                 <div>
                   <label for="religion">Religion</label>
-                  <input id="religion" name="religion" type="text" required />
+                  <input id="religion" name="religion" type="text" placeholder="votre religion" required />
                 </div>
                   <!-- Résidence -->
                 <div>
@@ -205,23 +232,23 @@
                     id="nom_quartier"
                     name="nom_quartier"
                     type="text"
-                    disabled
+                    required
                   />
                 </div>
                 <div>
                   <label for="telephone">Téléphone</label>
-                  <input id="telephone" name="telephone" type="tel" required />
+                  <input id="telephone" name="telephone" type="tel" placeholder="votre numero" required />
                 </div>
                 <div>
                   <label for="email">Email</label>
-                  <input id="email" name="email" type="email" required />
+                  <input id="email" name="email" type="email" placeholder="votre email" required />
                 </div>
                 <div>
                   <label for="groupe_sanguin">Groupe sanguin</label>
                   <input
                     id="groupe_sanguin"
                     name="groupe_sanguin"
-                    type="text"
+                    type="text" placeholder="votre groupe sanguin"
                     required
                   />
                 </div>
@@ -229,11 +256,11 @@
                 <!-- Parents -->
                 <div>
                   <label for="nom_pere">Nom du père</label>
-                  <input id="nom_pere" name="nom_pere" type="text" required />
+                  <input id="nom_pere" name="nom_pere" type="text" placeholder="le nom du pere" required />
                 </div>
                 <div>
                   <label for="nom_mere">Nom de la mère</label>
-                  <input id="nom_mere" name="nom_mere" type="text" required />
+                  <input id="nom_mere" name="nom_mere" type="text" placeholder="nom de la mere" required />
                 </div>
 
                 <!-- Responsable financier -->
@@ -242,7 +269,7 @@
                   <input
                     id="nom_responsable_financier"
                     name="nom_responsable_financier"
-                    type="text"
+                    type="text" placeholder="le nom du responsable de finance"
                     required
                   />
                 </div>
@@ -251,7 +278,7 @@
                   <input
                     id="telephone_responsable_financier"
                     name="telephone_responsable_financier"
-                    type="tel"
+                    type="tel" placeholder="numero de telephone du responsable"
                     required
                   />
                 </div>
@@ -265,13 +292,13 @@
                   <input
                     id="profession_anterieure"
                     name="profession_anterieure"
-                    type="text"
+                    type="text" placeholder="profession anterieure du responsable"
                     required
                   />
                 </div>
                 <div>
                   <label for="adresse">Adresse</label>
-                  <input id="adresse" name="adresse" type="text" placeholder="adres" required />
+                  <input id="adresse" name="adresse" type="text" placeholder="adresse du rensponsable" required />
                 </div>
 
                 <!-- Études antérieures -->
