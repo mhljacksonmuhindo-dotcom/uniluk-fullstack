@@ -48,8 +48,6 @@ def init_db():
             etat_civil TEXT NOT NULL,
             religion TEXT NOT NULL,
             groupe_sanguin TEXT NOT NULL,
-            province TEXT,
-            ville TEXT,
             adresse TEXT NOT NULL,
             nom_pere TEXT NOT NULL,
             nom_mere TEXT NOT NULL,
@@ -183,7 +181,6 @@ def inscription():
         "residence",
         "annee_scolaire",
         "diplome_obtenu",
-
         "domaine",
         "faculte",
         "filiere",
@@ -228,8 +225,6 @@ def inscription():
         "groupe_sanguin",
         "telephone",
         "email",
-        "province",
-        "ville",
         "adresse",
         "etablissement",
         "filiere",
@@ -265,8 +260,6 @@ def inscription():
         form.get("groupe_sanguin"),
         form.get("telephone"),
         form.get("email"),
-        form.get("province", ""),
-        form.get("ville", ""),
         form.get("adresse"),
         form.get("etablissement", ""),
         form.get("filiere"),
@@ -408,7 +401,7 @@ def admin_edit_inscription(inscription_id):
                 """
                 UPDATE inscriptions SET
                     nom = ?, prenom = ?, sexe = ?, date_naissance = ?, telephone = ?,
-                    email = ?, province = ?, ville = ?, adresse = ?, etablissement = ?,
+                    email = ?,  adresse = ?, etablissement = ?,
                     filiere = ?, message = ?
                 WHERE id = ?
                 """,
@@ -419,8 +412,6 @@ def admin_edit_inscription(inscription_id):
                     form.get("date_naissance", inscription_row["date_naissance"]),
                     form.get("telephone", inscription_row["telephone"]),
                     form.get("email", inscription_row["email"]),
-                    form.get("province", inscription_row["province"]),
-                    form.get("ville", inscription_row["ville"]),
                     form.get("adresse", inscription_row["adresse"]),
                     form.get("etablissement", inscription_row["etablissement"]),
                     form.get("filiere", inscription_row["filiere"]),

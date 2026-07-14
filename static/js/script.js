@@ -3,6 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const burger = document.getElementById("burger");
   const mobileMenu = document.querySelector(".mobile-menu");
   const backToTop = document.createElement("a");
+  
+  const dateInput=document.getElementById('date_naissance');
+   
+  if (dateInput){
+  const aujourdhui = new Date();
+  const annee= aujourdhui.getFullYear();
+  const mois = String(aujourdhui.getMonth()+ 1).padStart(2,'0');
+  const jour = String(aujourdhui.getDate()).padStart(2,'0');
+  const dateMax = `${annee}-${mois}-${jour}`;
+  dateInput.max= dateMax;
+  }
 
   const syncBurgerIcon = (isOpen) => {
     if (!burger) return;
