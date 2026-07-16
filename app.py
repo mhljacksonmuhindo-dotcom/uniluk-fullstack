@@ -11,9 +11,9 @@ try:
 except ImportError:
     pass
 
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATABASE_PATH = os.path.join(BASE_DIR, "database.db")
+
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 app.config["DATABASE"] = DATABASE_PATH
@@ -25,7 +25,6 @@ os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 app.config["MAX_ZIP_BYTES"] = 20 * 1024 * 1024  # 20 Mo
 
 def connexion():
-
     db = sqlite3.connect(app.config["DATABASE"])
     db.row_factory = sqlite3.Row
     return db
@@ -421,13 +420,21 @@ def admin_delete_inscription(inscription_id):
 
     db = connexion()
     try:
+        # 1. Récupération et suppression du fichier ZIP physique associé
+        row = db.execute("SELECT dossier_zip_path FROM inscriptions WHERE id = ?", (inscription_id,)).fetchone()
+        if row and row["dossier_zip_path"]:
+            file_path = os.path.join(app.config["UPLOAD_FOLDER"], row["dossier_zip_path"])
+            if os.path.exists(file_path):
+                os.remove(file_path)
+
         db.execute("DELETE FROM inscriptions WHERE id = ?", (inscription_id,))
         db.commit()
     finally:
         db.close()
 
-    flash("Inscription supprimée.", "info")
+    flash("Inscription et fichiers associés supprimés.", "info")
     return redirect(url_for("admin_inscriptions"))
+
 @app.route("/admin/messages")
 def admin_messages():
 
