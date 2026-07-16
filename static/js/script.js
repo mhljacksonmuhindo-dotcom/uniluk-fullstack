@@ -15,6 +15,85 @@ document.addEventListener("DOMContentLoaded", () => {
   dateInput.max= dateMax;
   }
 
+  const selectResidence = document.getElementById("residence");
+  const blocDortoir = document.getElementById("bloc-dortoir");
+  const selectDortoir = document.getElementById("nom_dortoir");
+  const blocQuartier = document.getElementById("bloc-quartier");
+  const inputQuartier = document.getElementById("nom_quartier");
+
+  if (selectResidence) {
+    selectResidence.addEventListener("change", function () {
+      const choix = this.value;
+
+      
+      if (blocDortoir && selectDortoir) {
+        blocDortoir.style.display = "none";
+        selectDortoir.required = false;
+        selectDortoir.value = "";
+      }
+
+      if (blocQuartier && inputQuartier) {
+        blocQuartier.style.display = "none";
+        inputQuartier.required = false;
+        inputQuartier.value = "";
+      }
+
+      // 2. Activation selon le choix
+      if (choix === "Interne" || choix === "Semi-interne") {
+        if (blocDortoir && selectDortoir) {
+          blocDortoir.style.display = "block";
+          selectDortoir.required = true; 
+        }
+      } else if (choix === "Externe") {
+        if (blocQuartier && inputQuartier) {
+          blocQuartier.style.display = "block";
+          inputQuartier.required = true; 
+        }
+      }
+    });
+  }
+
+  
+  const selectPromotion = document.getElementById("promotion");
+  const blocEtudes = document.getElementById("bloc-etudes-anterieures");
+  const inputAnneeScolaire = document.getElementById("annee_scolaire");
+  const inputEtablissement = document.getElementById("etablissement_fréquenté");
+  const inputDiplome = document.getElementById("diplome_obtenu");
+
+  if (selectPromotion) {
+    selectPromotion.addEventListener("change", function () {
+      const promo = this.value;
+      
+      
+      const classesMontantes = ["L2", "L3", "M0", "M1", "M2", "MC", "ML"];
+
+      if (classesMontantes.includes(promo)) {
+        //  affichage bloc et on rend les champs obligatoires
+        if (blocEtudes) blocEtudes.style.display = "grid";
+        if (inputAnneeScolaire) inputAnneeScolaire.required = true;
+        if (inputEtablissement) inputEtablissement.required = true;
+        if (inputDiplome) inputDiplome.required = true;
+      } else {
+        
+        if (blocEtudes) blocEtudes.style.display = "none";
+        
+        if (inputAnneeScolaire) {
+          inputAnneeScolaire.required = false;
+          inputAnneeScolaire.value = "";
+        }
+        if (inputEtablissement) {
+          inputEtablissement.required = false;
+          inputEtablissement.value = "";
+        }
+        if (inputDiplome) {
+          inputDiplome.required = false;
+          inputDiplome.value = "";
+        }
+      }
+    });
+  }
+
+
   const syncBurgerIcon = (isOpen) => {
     if (!burger) return;
 

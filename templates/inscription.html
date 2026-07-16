@@ -140,7 +140,6 @@
               enctype="multipart/form-data"
             >
               <div class="form-grid">
-                <!-- Informations personnelles -->
                 <div>
                   <label for="nom">Nom</label>
                   <input id="nom" name="nom" type="text" placeholder="votre nom" required />
@@ -211,23 +210,25 @@
                     <option value="Externe">Externe</option>
                   </select>
                 </div>
-                <div>
+
+                <div id="bloc-dortoir" style="display: none;">
                   <label for="nom_dortoir">Nom du dortoir</label>
-                   <select id="nom_dortoir" name="nom_dortoir" required>
+                  <select id="nom_dortoir" name="nom_dortoir">
                     <option value="">Sélectionnez</option>
-                    <option value="Interne">Plaza</option>
-                    <option value="Semi-interne">Antlanta</option>
-                    <option value="interne">Home</option>
-                    <option value="Externe">Autre</option>
+                    <option value="Plaza">Plaza</option>
+                    <option value="Atlanta">Atlanta</option>
+                    <option value="Home">Home</option>
+                    <option value="Autre">Autre</option>
                   </select>
                 </div>
-                <div>
+
+                <div id="bloc-quartier" style="display: none;">
                   <label for="nom_quartier">Nom du quartier pour les externes</label>
                   <input
                     id="nom_quartier"
                     name="nom_quartier"
-                    type="text" placeholder="nom du quartier"
-                    required
+                    type="text" 
+                    placeholder="nom du quartier"
                   />
                 </div>
                 <div>
@@ -298,40 +299,40 @@
 
                 <!-- Études antérieures -->
               
-                <div>
-                  <label for="annee_scolaire">Année scolaire/academique :</label>
-                  <input  placeholder="anne scolaire ou academique"
-                    id="annee_scolaire"
-                    name="annee_scolaire"
-                    type="text"
-                    required
-                  />
+                <div id="bloc-etudes-anterieures" style="display: none; grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                  <div>
+                    <label for="annee_scolaire">Année académique antérieure :</label>
+                    <input 
+                      placeholder="Ex: 2024-2025"
+                      id="annee_scolaire"
+                      name="annee_scolaire"
+                      type="text"
+                    />
+                  </div>
+                  <div>
+                    <label for="etablissement_fréquenté">Établissement fréquenté</label>
+                    <input
+                      id="etablissement_fréquenté"
+                      name="etablissement"
+                      type="text"
+                      placeholder="Entrez l’établissement" 
+                    />
+                  </div>
+                  <div>
+                    <label for="diplome_obtenu">Dernier diplôme/titre obtenu</label>
+                    <input 
+                      placeholder="Ex: Diplôme de Gradué, Attestation de réussite..."
+                      id="diplome_obtenu"
+                      name="diplome_obtenu"
+                      type="text"
+                    />
+                  </div>
                 </div>
-                <div>
-                  <label for="etablissement_fréquenté"
-                    >Établissement fréquenté</label
-                  >
-                  <input
-                    id="etablissement_fréquenté"
-                    name="etablissement"
-                    type="text"
-                    placeholder="Entrez l’établissement" 
-                  />
-                </div>
-                <div>
-                  <label for="diplome_obtenu">Diplôme obtenu</label>
-                  <input placeholder="diplome obtenu"
-                    id="diplome_obtenu"
-                    name="diplome_obtenu"
-                    type="text"
-                    required
-                  />
-                </div>
-                
+                                
                 <!-- Choix académique -->
                 <div>
                   <label for="domaine">Domaine</label>
-                  <input id="domaine" name="domaine" placeholder="votre domaine" type="text" required />
+                  <input id="domaine" name="domaine" placeholder="votre domaine" type="text" />
                 </div>
                 <div>
                   <label for="faculte">Faculté</label>
@@ -359,7 +360,7 @@
                 </div>
                 <div>
                   <label for="mention">Mention </label>
-                  <input id="mention" name="mention" type="text"  placeholder="la mention" required />
+                  <input id="mention" name="mention" type="text"  placeholder="la mention" />
                 </div>
                 <div>
                   <label for="promotion">Promotion</label>

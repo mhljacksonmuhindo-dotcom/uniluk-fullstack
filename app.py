@@ -179,15 +179,12 @@ def inscription():
         "telephone_responsable_financier",
         "profession_anterieure",
         "residence",
-        "annee_scolaire",
-        "diplome_obtenu",
-        "domaine",
         "faculte",
         "filiere",
-        "mention",
         "promotion",
     ]
 
+    # 2. Validation du dossier ZIP
     dossier_zip = request.files.get("dossier_zip")
     if not dossier_zip or dossier_zip.filename is None:
         flash("Veuillez téléverser le dossier ZIP.", "danger")
@@ -197,7 +194,7 @@ def inscription():
         flash("Le dossier ZIP doit avoir une extension .zip.", "danger")
         return redirect(url_for("inscription"))
 
-    # taille ZIP
+    # Vérification de la taille du ZIP
     dossier_zip.stream.seek(0, os.SEEK_END)
     file_size = dossier_zip.stream.tell()
     dossier_zip.stream.seek(0)
@@ -206,6 +203,21 @@ def inscription():
         flash("Le ZIP dépasse 20Mo maximum.", "danger")
         return redirect(url_for("inscription"))
 
+   
+    promotion_choisie = form.get("promotion", "")
+    classes_montantes = ["L2", "L3", "M0", "M1", "M2", "MC", "ML"]
+
+    if promotion_choisie in classes_montantes:
+        required_fields.extend(["annee_scolaire", "diplome_obtenu"])
+
+    
+    type_residence = form.get("residence", "")
+    if type_residence in ["Interne", "Semi-interne"]:
+        required_fields.append("nom_dortoir")
+    elif type_residence == "Externe":
+        required_fields.append("nom_quartier")
+
+    
     missing = [field for field in required_fields if not form.get(field)]
 
     if missing:
@@ -213,38 +225,13 @@ def inscription():
         return redirect(url_for("inscription"))
 
     columns = [
-        "nom",
-        "prenom",
-        "postnom",
-        "sexe",
-        "date_naissance",
-        "lieu_naissance",
-        "nationalite",
-        "etat_civil",
-        "religion",
-        "groupe_sanguin",
-        "telephone",
-        "email",
-        "adresse",
-        "etablissement",
-        "filiere",
-        "message",
-        "nom_pere",
-        "nom_mere",
-        "nom_responsable_financier",
-        "telephone_responsable_financier",
-        "profession_anterieure",
-        "residence",
-        "nom_dortoir",
-        "nom_quartier",
-        "annee_scolaire",
-        "etablissement_frequente",
-        "diplome_obtenu",
-        "domaine",
-        "faculte",
-        "mention",
-        "promotion",
-        "dossier_zip_path",
+        "nom", "prenom", "postnom", "sexe", "date_naissance", "lieu_naissance",
+        "nationalite", "etat_civil", "religion", "groupe_sanguin", "telephone",
+        "email", "adresse", "etablissement", "filiere", "message", "nom_pere",
+        "nom_mere", "nom_responsable_financier", "telephone_responsable_financier",
+        "profession_anterieure", "residence", "nom_dortoir", "nom_quartier",
+        "annee_scolaire", "etablissement_frequente", "diplome_obtenu", "domaine",
+        "faculte", "mention", "promotion", "dossier_zip_path",
     ]
 
     values = [
@@ -272,16 +259,15 @@ def inscription():
         form.get("residence"),
         form.get("nom_dortoir", ""),
         form.get("nom_quartier", ""),
-        form.get("annee_scolaire"),
+        form.get("annee_scolaire", "") if promotion_choisie in classes_montantes else "",
         form.get("etablissement_frequente", ""),
-        form.get("diplome_obtenu"),
-        form.get("domaine"),
+        form.get("diplome_obtenu", "") if promotion_choisie in classes_montantes else "",
+        form.get("domaine", ""),
         form.get("faculte"),
-        form.get("mention"),
-        form.get("promotion"),
+        form.get("mention", ""),
+        promotion_choisie,
         None,  
     ]
-
 
     placeholders = ", ".join(["?"] * len(columns))
     column_list = ", ".join(columns)
